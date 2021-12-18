@@ -1,10 +1,12 @@
 @extends('layouts.admin')
 
-@section('title','Add Product Page')
+@section('title','Add Home Page')
 
 @section('javascript')
 
-    <script src="https://cdn.ckeditor.com/ckeditor5/25.0.0/classic/ckeditor.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     @endsection
 
 @section('content')
@@ -14,14 +16,14 @@
             <section class="content-header">
 
                 <h3>
-                    Add Product
+                    Add Home
                 </h3>
 
                 <ol class="breadcrumb" style="color: #cbd5e0">
 
                     <li><a href="{{url('/')}}/admin"><i class="fa fa-dashboard"></i> Anasayfa</a></li>
                     <li>/</li>
-                    <li>Product Ekle</li>
+                    <li>Home Ekle</li>
                 </ol>
 
             </section>
@@ -111,14 +113,28 @@
                                 <input type="text" name="garage" class="form-control" >
                             </div>
                             <div class="form-group">
-                                <label >Detail</label>
-                                <textarea id="detail" name="detail"></textarea>
+                                <label>Detail</label>
+                                <textarea id="summernote" name="detail"></textarea>
                                 <script>
-                                    ClassicEditor
-                                        .create( document.querySelector( '#detail' ) )
-                                        .catch( error => {
-                                            console.error( error );
-                                        } );
+                                    $(document).ready(function() {
+                                        $('#summernote').summernote();
+                                    });
+                                </script>
+                                <script>
+                                    $('#summernote').summernote({
+                                        placeholder: '',
+                                        tabsize: 2,
+                                        height: 120,
+                                        toolbar: [
+                                            ['style', ['style']],
+                                            ['font', ['bold', 'underline', 'clear']],
+                                            ['color', ['color']],
+                                            ['para', ['ul', 'ol', 'paragraph']],
+                                            ['table', ['table']],
+                                            ['insert', ['link', 'picture', 'video']],
+                                            ['view', ['fullscreen', 'codeview', 'help']]
+                                        ]
+                                    });
                                 </script>
                             </div>
                             <div class="form-group">
@@ -129,7 +145,7 @@
                             </div>
 
 
-                        <button type="submit" class="btn btn-primary mr-2">Add Product</button>
+                        <button type="submit" class="btn btn-primary mr-2">Add Home</button>
                         <button class="btn btn-dark">Cancel</button>
                         </div>
                     </form>

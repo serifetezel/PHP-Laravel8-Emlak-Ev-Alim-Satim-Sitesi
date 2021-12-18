@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title','Edit Product Page')
+@section('title','Edit Home Page')
 
 @section('javascript')
 
@@ -14,14 +14,14 @@
             <section class="content-header">
 
                 <h3>
-                    Edit Product
+                    Edit Home
                 </h3>
 
                 <ol class="breadcrumb" style="color: #cbd5e0">
 
                     <li><a href="{{url('/')}}/admin"><i class="fa fa-dashboard"></i> Anasayfa</a></li>
                     <li>/</li>
-                    <li>Product Düzenle</li>
+                    <li>Home Düzenle</li>
                 </ol>
 
             </section>
@@ -130,7 +130,7 @@
                             </div>
 
 
-                        <button type="submit" class="btn btn-primary mr-2">Update Product</button>
+                        <button type="submit" class="btn btn-primary mr-2">Update Home</button>
                         <button class="btn btn-dark">Cancel</button>
                         </div>
                     </form>

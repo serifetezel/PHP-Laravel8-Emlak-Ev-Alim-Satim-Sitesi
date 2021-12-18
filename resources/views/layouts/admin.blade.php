@@ -26,6 +26,7 @@
 </head>
 
 <body>
+
 <div class="container-scroller">
 @include('admin._navigation')
     <div class="container-fluid page-body-wrapper">

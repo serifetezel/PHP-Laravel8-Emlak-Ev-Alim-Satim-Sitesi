@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title','Product List')
+@section('title','Home List')
 
 @section('content')
     <div class="card">
@@ -9,15 +9,15 @@
         <section class="content-header">
 
             <h1>
-                Product Listesi
+                Home Listesi
             </h1>
             <ol class="breadcrumb" style="color: #cbd5e0">
                 <li><a href="{{url('/')}}/admin"><i class="fa fa-dashboard"></i> Anasayfa</a></li>
                 <li>/</li>
-                <li>Products</li>
+                <li>Homes</li>
             </ol>
 
-            <a href="{{route('admin_product_add')}}" type="button" class="btn btn-inverse-primary btn-fw" style="width: 120px">Add Product</a>
+            <a href="{{route('admin_product_add')}}" type="button" class="btn btn-inverse-primary btn-fw" style="width: 120px">Add Home</a>
             <div><br></div>
 
         </section>
@@ -53,6 +53,7 @@
                             <th>Garage</th>
                             <th>Detail</th>
                             <th>Image</th>
+                            <th>Image Gallery</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -80,11 +81,14 @@
                                 <td> {{ $rs->detail }}</td>
                                 <td>
                                     @if ($rs->image)
-                                        <img src="{{Storage::url($rs->image)}}" height="30" alt="">
+                                        <img src="{{Storage::url($rs->image)}}" height="60" alt="">
                                     @endif
                                 </td>
+                                <td><a href="{{route('admin_image_add',['home_id'=>$rs->id])}}" onclick="return !window.open(this.href, '','top=50 left=100,width=1100,height=700')">
+                                        <img src="{{asset('assets/admin')}}/assets/images/gallery.png" height="25"></a>
+                                </td>
                                 <td><a href="{{route('admin_product_edit', ['id' => $rs->id])}}">Edit</a></td>
-                                <td><a href="{{route('admin_product_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"  >Delete</a></td>
+                                <td><a href="{{route('admin_product_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"  ><img src="{{asset('assets/admin')}}/assets/images/delete.png" height="15"></a></td>
                             </tr>
                         @endforeach
                         </tbody>

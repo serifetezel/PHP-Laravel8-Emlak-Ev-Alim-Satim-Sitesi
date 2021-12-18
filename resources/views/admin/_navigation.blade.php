@@ -73,7 +73,7 @@
               <span class="menu-icon">
                 <i class="mdi mdi-speedometer"></i>
               </span>
-                <span class="menu-title">Products</span>
+                <span class="menu-title">Homes</span>
             </a>
         </li>
         <li class="nav-item menu-items">
