@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title','Category List')
+@section('title','Product List')
 
 @section('content')
     <div class="card">
@@ -9,15 +9,15 @@
         <section class="content-header">
 
             <h1>
-                Kategori Listesi
+                Product Listesi
             </h1>
             <ol class="breadcrumb" style="color: #cbd5e0">
                 <li><a href="{{url('/')}}/admin"><i class="fa fa-dashboard"></i> Anasayfa</a></li>
                 <li>/</li>
-                <li>Kategoriler</li>
+                <li>Products</li>
             </ol>
 
-            <a href="{{route('admin_category_add')}}" type="button" class="btn btn-inverse-primary btn-fw" style="width: 120px">Add Category</a>
+            <a href="{{route('admin_product_add')}}" type="button" class="btn btn-inverse-primary btn-fw" style="width: 120px">Add Product</a>
             <div><br></div>
 
         </section>
@@ -27,30 +27,32 @@
 
             <!-- Default box -->
             <div class="card">
-                <div class="card-header with-border">
 
-                    <!--
-                    <div class="box-tools pull-right">
-                        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                                title="Collapse">
-                            <i class="fa fa-minus"></i></button>
-                        <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-                            <i class="fa fa-times"></i></button>
-                    </div>
-                    -->
-                </div>
 
                 <div class="card-body">
-                    <div style="overflow: auto">
+                    <div style="overflow:auto">
                     <table class="table table-bordered">
                         <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Parent </th>
+                            <th>Category</th>
                             <th>Title(s)</th>
                             <th>Keywords</th>
                             <th>Description</th>
                             <th>Status</th>
+                            <th>Price</th>
+                            <th>Area</th>
+                            <th>Location</th>
+                            <th>Floor</th>
+                            <th>Room</th>
+                            <th>Furnished</th>
+                            <th>Bathroom</th>
+                            <th>Balcony</th>
+                            <th>Heating</th>
+                            <th>Garden</th>
+                            <th>Garage</th>
+                            <th>Detail</th>
+                            <th>Image</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -59,13 +61,30 @@
                         @foreach($datalist as $rs)
                             <tr>
                                 <td> {{ $rs->id }}</td>
-                                <td> {{ $rs->parent_id }}</td>
+                                <td> {{ $rs->category_id }}</td>
                                 <td> {{ $rs->title }}</td>
                                 <td> {{ $rs->keywords }}</td>
                                 <td> {{ $rs->description }}</td>
                                 <td> {{ $rs->status }}</td>
-                                <td><a href="{{route('admin_category_edit', ['id' => $rs->id])}}"> Edit</a></td>
-                                <td><a href="{{route('admin_category_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"  > Delete </a></td>
+                                <td> {{ $rs->price }}</td>
+                                <td> {{ $rs->area }}</td>
+                                <td> {{ $rs->location }}</td>
+                                <td> {{ $rs->floor }}</td>
+                                <td> {{ $rs->room }}</td>
+                                <td> {{ $rs->furnished }}</td>
+                                <td> {{ $rs->bathroom }}</td>
+                                <td> {{ $rs->balcony }}</td>
+                                <td> {{ $rs->heating }}</td>
+                                <td> {{ $rs->garden }}</td>
+                                <td> {{ $rs->garage }}</td>
+                                <td> {{ $rs->detail }}</td>
+                                <td>
+                                    @if ($rs->image)
+                                        <img src="{{Storage::url($rs->image)}}" height="30" alt="">
+                                    @endif
+                                </td>
+                                <td><a href="{{route('admin_product_edit', ['id' => $rs->id])}}">Edit</a></td>
+                                <td><a href="{{route('admin_product_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"  >Delete</a></td>
                             </tr>
                         @endforeach
                         </tbody>
