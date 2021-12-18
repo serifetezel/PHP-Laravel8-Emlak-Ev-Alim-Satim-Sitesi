@@ -77,11 +77,11 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{route('admin_setting')}}">
               <span class="menu-icon">
-                <i class="mdi mdi-speedometer"></i>
+                <i class="mdi mdi-settings text-primary"></i>
               </span>
-                <span class="menu-title">Dashboard</span>
+                <span class="menu-title">Settings</span>
             </a>
         </li>
         <li class="nav-item menu-items">
