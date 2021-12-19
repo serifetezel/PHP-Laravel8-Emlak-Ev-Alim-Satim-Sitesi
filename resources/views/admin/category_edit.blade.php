@@ -7,35 +7,28 @@
         <div class="card-body">
             <!-- Content Header (Page header) -->
             <section class="content-header">
-
                 <h3>
                     Edit Category
                 </h3>
-
                 <ol class="breadcrumb" style="color: #cbd5e0">
-
                     <li><a href="{{url('/')}}/admin"><i class="fa fa-dashboard"></i> Anasayfa</a></li>
                     <li>/</li>
                     <li>Kategori Düzenle</li>
                 </ol>
-
             </section>
-
             <!-- Main content -->
         <section class="content">
-
             <!-- Default box -->
             <div class="card">
-
                     <form class="forms-sample" action="{{route('admin_category_update',['id'=>$data->id])}}" method="post">
                         @csrf
                         <div class="card-body">
                         <div class="form-group">
                             <label>Parent</label>
                             <select class="form-control select2" name="parent_id" style="width: 100%;">
-                                <option value="0">Main Category</option>
+                                <option value="0" selected="selected">Main Category</option>
                                 @foreach($datalist as $rs)
-                                    <option value="{{ $rs->id }}" @if ($rs->id == $data->parent_id) selected="selected" @endif > {{ $rs->title }}</option>
+                                    <option value="{{ $rs->id }}" @if ($rs->id == $data->parent_id) selected="selected" @endif > {{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs, $rs->title) }}</option>
                                 @endforeach
                             </select>
                         </div>

@@ -3,15 +3,20 @@
 @section('title','Edit Setting Page')
 
 @section('javascript')
+
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     <!-- include summernote css/js -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+    <script src="https://partner.googleadservices.com/gampad/cookie.js?domain=bestjquery.com&callback=_gfp_s_&client=ca-pub-3311815518700050&cookie=ID%3D16525bf5c57735cb-22a608810acd00b1%3AT%3D1639912306%3ART%3D1639912306%3AS%3DALNI_MaFCz69ukLNc9GcchPZGSzqivaWZw"></script><script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202112060101/show_ads_impl_fy2019.js" id="google_shimpl"></script><script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 @endsection
 
 @section('content')
+
     <div class="card">
         <div class="card-body">
             <!-- Content Header (Page header) -->
@@ -31,6 +36,7 @@
             @csrf
             <!-- Default box -->
             <div class="card" style="padding: 15px">
+                <div class="container">
                 <div class="row">
                     <div class="card-body">
                         <div class="col-md-12 col-md-offset-3">
@@ -164,10 +170,15 @@
                         </div>
                     </div>
                 </div>
+                </div>
+
+                </script>
             </div>
         </section>
     </form>
 </div>
+
+
     <!-- /.box -->
 @endsection
 
