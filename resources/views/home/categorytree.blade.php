@@ -8,6 +8,6 @@
             <hr>
         @else
         <li><a href="#">{{$subcategory->title}}</a> </li>
-            @endif
+        @endif
     </ul>
 @endforeach

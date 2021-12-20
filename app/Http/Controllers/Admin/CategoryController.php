@@ -32,7 +32,6 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
         $datalist = DB::select('select * from categories');
         return view('admin.category', ['datalist' => $datalist]);
     }

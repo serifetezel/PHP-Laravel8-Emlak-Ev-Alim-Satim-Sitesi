@@ -14,11 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/properties', [HomeController::class, 'properties'])->name('properties');
+Route::get('/agent', [HomeController::class, 'agent'])->name('agent');
+Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
+Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+
 
 Route::get('/admin', [\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin_home')->middleware('auth');
 
@@ -60,7 +66,7 @@ Route::middleware('auth')->prefix('admin')->group(function (){
 
 Route::get('/admin/login', [HomeController::class, 'login'])->name('admin_login');
 Route::post('/admin/logincheck', [HomeController::class, 'logincheck'])->name('admin_logincheck');
-Route::get('/logout', [HomeController::class, 'logout'])->name('admin_logout');
+Route::get('/logout', [HomeController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

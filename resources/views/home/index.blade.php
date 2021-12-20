@@ -1,7 +1,5 @@
 @extends('layouts.home')
 
-@section('title','Laravel Emlak Sitesi')
-@section('description')
-    Türkiye'nin en güvenilir ve en çok ev bulunduran emlak sitesi...
-@endsection
-@section('keywords','sale','home')
+@section('title',$setting->title)
+@section('description'){{ $setting->description }}@endsection
+@section('keywords',$setting->keywords)
