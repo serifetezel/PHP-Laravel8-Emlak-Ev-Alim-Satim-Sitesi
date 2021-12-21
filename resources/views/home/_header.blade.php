@@ -34,7 +34,7 @@
                     </li>
 
                     <li>
-                        <a href="properties.html"  class="fh5co-sub-ddown">Properties</a>
+                        <a href="properties.html"  class="fh5co-sub-ddown @if(!isset($page)) show-on-click @endif">Properties</a>
                         <ul class="fh5co-sub-menu">
                             <li><a href="#">Family</a></li>
                             <li><a href="#">CSS3 &amp; HTML5</a></li>
@@ -59,8 +59,11 @@
                                 <a href="#" style="font-size:12px; color:#0a0a0a" class="fh5co-sub-ddown" data-toggle="dropdown" aria-expanded="true">{{ Auth::user()->name }}</a>
                             @endauth
                             <ul class="fh5co-sub-menu">
+                                <li><a href="{{route('myprofile')}}" onclick="return !window.open(this.href, '','top=50 left=100,width=1100,height=700')">
+                                        <img src="{{ asset('assets')}}/images/my_account.png" height="20">My Account</a></li>
                                 <li><a href="{{route('logout')}}" onclick="return !window.open(this.href, '','top=50 left=100,width=1100,height=700')">
                                         <img src="{{ asset('assets')}}/images/logout.png" height="20">Logout</a></li>
+
                             </ul>
                         </a>
                         <!--

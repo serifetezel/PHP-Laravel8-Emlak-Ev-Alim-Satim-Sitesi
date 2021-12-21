@@ -75,6 +75,7 @@
 <div id="fh5co-wrapper">
     <div id="fh5co-page">
 @include('home._header')
+@section('content')
 @include('home._aside')
 @include('home._search')
 @include('home._features')
@@ -84,6 +85,7 @@
 @include('home._our_agents')
 @include('home._recent_from_blog')
 @include('home._ask_an_agents')
+@show
 @include('home._footer')
 
     </div>

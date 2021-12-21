@@ -16,7 +16,7 @@
                         <span>Gold Member</span>-->
                         @auth
                             <a href="#" class="d-block" style="font-size:15px; color:#cbd5e0">{{ Auth::user()->name }}</a>
-                            <a style="font-size:15px; color:#cbd5e0" href="{{ route('admin_logout') }}" class="d-block">Logout</a>
+                            <a style="font-size:15px; color:#cbd5e0" href="{{ route('logout') }}" class="d-block">Logout</a>
                         @endauth
                     </div>
                 </div>
