@@ -21,11 +21,13 @@
                                     <ul class="fh5co-sub-menu">
                                         <a class="fh5co-sub-ddown" data-toggle="dropdown" aria-expanded="true">
                                             <ul class="fh5co-sub-menu">
-                                        @if(count($rs->children))
-                                            @include('home.categorytree',['children' => $rs->children])
-                                        @endif
+                                                <i class="fa fa-angle-right">
+                                                    @if(count($rs->children))
+                                                        @include('home.categorytree',['children' => $rs->children])
+                                                    @endif
+                                                </i>
                                             </ul>
-                                            <i class="fa fa-angle-right"></i></a>
+                                        </a>
                                     </ul>
 
                                 </li>

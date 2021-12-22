@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Message;
+use App\Models\Product;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -24,7 +25,23 @@ class HomeController extends Controller
     public function index()
     {
         $setting = Setting::first();
-        return view('home.index',['setting'=>$setting,'page'=>'home']);
+        $slider = Product::select('id','title','image','price','detail','location','bathroom','room','description','area')->limit(5)->get();
+        #print_r($slider);
+        #exit();
+        $data=[
+        'setting'=>$setting,
+            'slider'=>$slider,
+            'page'=>'home'
+        ];
+
+        return view('home.index',$data);
+    }
+
+    public function home_detail($id)
+    {
+        $data = Product::find($id);
+        print_r($data);
+        exit();
     }
 
     public function aboutus()

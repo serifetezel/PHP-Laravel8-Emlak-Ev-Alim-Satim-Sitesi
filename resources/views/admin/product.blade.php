@@ -78,7 +78,7 @@
                                 <td> {{ $rs->heating }}</td>
                                 <td> {{ $rs->garden }}</td>
                                 <td> {{ $rs->garage }}</td>
-                                <td> {{ $rs->detail }}</td>
+                                <td> {!! $rs->detail !!} </td>
                                 <td>
                                     @if ($rs->image)
                                         <img src="{{Storage::url($rs->image)}}" height="60" alt="">
