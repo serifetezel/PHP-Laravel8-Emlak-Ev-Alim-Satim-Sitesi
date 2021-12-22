@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -22,9 +23,12 @@ Route::get('/welcome', function () {
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/properties', [HomeController::class, 'properties'])->name('properties');
+Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
+Route::get('/references', [HomeController::class, 'references'])->name('references');
 Route::get('/agent', [HomeController::class, 'agent'])->name('agent');
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
 
 
 Route::get('/admin', [\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin_home')->middleware('auth');
@@ -52,6 +56,14 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::get('show',[\App\Http\Controllers\Admin\ProductController::class,'show'])->name('admin_product_show');
     });
 
+    Route::prefix('messages')->group(function (){
+        Route::get('/',[MessageController::class,'index'])->name('admin_message');
+        Route::get('edit/{id}',[MessageController::class,'edit'])->name('admin_message_edit');
+        Route::post('update/{id}',[MessageController::class,'update'])->name('admin_message_update');
+        Route::get('delete/{id}',[MessageController::class,'destroy'])->name('admin_message_delete');
+        Route::get('show',[MessageController::class,'show'])->name('admin_message_show');
+    });
+
     #Home Image Gallery
     Route::prefix('image')->group(function (){
         Route::get('create/{home_id}',[\App\Http\Controllers\Admin\ImageController::class,'create'])->name('admin_image_add');
@@ -67,6 +79,10 @@ Route::middleware('auth')->prefix('admin')->group(function (){
 
 Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
     Route::get('/',[UserController::class,'index'])->name('myprofile');
+});
+
+Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
+    Route::get('/profile',[UserController::class,'index'])->name('userprofile');
 });
 
 Route::get('/admin/login', [HomeController::class, 'login'])->name('admin_login');

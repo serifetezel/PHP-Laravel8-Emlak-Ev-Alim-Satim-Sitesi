@@ -43,10 +43,11 @@
                             <li><a href="#">Django &amp; Python</a></li>
                         </ul>
                     </li>
-
+                    <li><a href="{{route('aboutus')}}">About Us</a></li>
+                    <li><a href="{{route('references')}}">References</a></li>
                     <li><a href="agent.html">Agent</a></li>
                     <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="{{route('contact')}}">Contact</a></li>
                     @guest
                     <li><a href="/login">
                             <img src="{{ asset('assets')}}/images/login.jpg" height="25">Login</a></li>
@@ -54,15 +55,16 @@
                             <img src="{{ asset('assets')}}/images/c_account.png" height="20">Create Account</a></li>
                     @endguest
                     <li><a class="fh5co-sub-ddown" href="#" >
-                                <img src="{{ asset('assets/admin')}}/assets/images/faces/face15.jpg" alt="" height="35">
+
                             @auth
+                                <img src="{{ Auth::user()->profile_photo_url}}" height="25" width="25">
                                 <a href="#" style="font-size:12px; color:#0a0a0a" class="fh5co-sub-ddown" data-toggle="dropdown" aria-expanded="true">{{ Auth::user()->name }}</a>
                             @endauth
                             <ul class="fh5co-sub-menu">
                                 <li><a href="{{route('myprofile')}}" onclick="return !window.open(this.href, '','top=50 left=100,width=1100,height=700')">
-                                        <img src="{{ asset('assets')}}/images/my_account.png" height="20">My Account</a></li>
-                                <li><a href="{{route('logout')}}" onclick="return !window.open(this.href, '','top=50 left=100,width=1100,height=700')">
-                                        <img src="{{ asset('assets')}}/images/logout.png" height="20">Logout</a></li>
+                                        <img src="{{ asset('assets')}}/images/my_account.png" height="20" width="20">My Account</a></li>
+                                <li><a href="{{route('logout')}}" >
+                                        <img src="{{ asset('assets')}}/images/logout.png" height="20" width="20">Logout</a></li>
 
                             </ul>
                         </a>

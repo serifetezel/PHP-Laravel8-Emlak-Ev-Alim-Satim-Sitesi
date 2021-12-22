@@ -12,7 +12,7 @@
                 Kategori Listesi
             </h1>
             <ol class="breadcrumb" style="color: #cbd5e0">
-                <li><a href="{{url('/')}}/admin"><i class="fa fa-dashboard"></i> Anasayfa</a></li>
+                <li class="ml-auto"><a href="{{url('/')}}/admin"><i class="fa fa-dashboard"></i> Anasayfa</a></li>
                 <li>/</li>
                 <li>Kategoriler</li>
             </ol>

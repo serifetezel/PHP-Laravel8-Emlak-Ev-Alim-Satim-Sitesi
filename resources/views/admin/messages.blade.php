@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title','Home List')
+@section('title','Contact Messages List')
 
 @section('content')
     <div class="card">
@@ -9,21 +9,19 @@
         <section class="content-header">
 
             <h1>
-                Home Listesi
+                Messages List
             </h1>
             <ol class="breadcrumb" style="color: #cbd5e0">
                 <li class="ml-auto"><a href="{{url('/')}}/admin"><i class="fa fa-dashboard"></i> Anasayfa</a></li>
                 <li>/</li>
                 <li>Homes</li>
             </ol>
-
-            <a href="{{route('admin_product_add')}}" type="button" class="btn btn-inverse-primary btn-fw" style="width: 120px">Add Home</a>
             <div><br></div>
 
         </section>
 
         <!-- Main content -->
-
+        @include('home.message')
 
             <!-- Default box -->
             <div class="card">
@@ -35,25 +33,13 @@
                         <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Category</th>
-                            <th>Title(s)</th>
-                            <th>Keywords</th>
-                            <th>Description</th>
-                            <th>Status</th>
-                            <th>Price</th>
-                            <th>Area</th>
-                            <th>Location</th>
-                            <th>Floor</th>
-                            <th>Room</th>
-                            <th>Furnished</th>
-                            <th>Bathroom</th>
-                            <th>Balcony</th>
-                            <th>Heating</th>
-                            <th>Garden</th>
-                            <th>Garage</th>
-                            <th>Detail</th>
-                            <th>Image</th>
-                            <th>Image Gallery</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Subject</th>
+                            <th>Message</th>
+                            <th>Admin Note</th>
+                            <th>Actions</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
@@ -62,33 +48,17 @@
                         @foreach($datalist as $rs)
                             <tr>
                                 <td> {{ $rs->id }}</td>
-                                <td> {{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs->category,$rs->category->title) }}</td>
-                                <td> {{ $rs->title }}</td>
-                                <td> {{ $rs->keywords }}</td>
-                                <td> {{ $rs->description }}</td>
+                                <td> {{($rs->name)}}</td>
+                                <td> {{ $rs->email }}</td>
+                                <td> {{ $rs->phone }}</td>
+                                <td> {{ $rs->subject }}</td>
+                                <td> {{ $rs->message }}</td>
+                                <td> {{ $rs->note }}</td>
                                 <td> {{ $rs->status }}</td>
-                                <td> {{ $rs->price }}</td>
-                                <td> {{ $rs->area }}</td>
-                                <td> {{ $rs->location }}</td>
-                                <td> {{ $rs->floor }}</td>
-                                <td> {{ $rs->room }}</td>
-                                <td> {{ $rs->furnished }}</td>
-                                <td> {{ $rs->bathroom }}</td>
-                                <td> {{ $rs->balcony }}</td>
-                                <td> {{ $rs->heating }}</td>
-                                <td> {{ $rs->garden }}</td>
-                                <td> {{ $rs->garage }}</td>
-                                <td> {{ $rs->detail }}</td>
-                                <td>
-                                    @if ($rs->image)
-                                        <img src="{{Storage::url($rs->image)}}" height="60" alt="">
-                                    @endif
+                                <td><a href="{{route('admin_message_edit',['id'=>$rs->id])}}" onclick="return !window.open(this.href, '','top=50 left=100,width=800,height=600')">
+                                        Edit</a>
                                 </td>
-                                <td><a href="{{route('admin_image_add',['home_id'=>$rs->id])}}" onclick="return !window.open(this.href, '','top=50 left=100,width=1100,height=700')">
-                                        <img src="{{asset('assets/admin')}}/assets/images/gallery.png" height="25"></a>
-                                </td>
-                                <td><a href="{{route('admin_product_edit', ['id' => $rs->id])}}">Edit</a></td>
-                                <td><a href="{{route('admin_product_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"  ><img src="{{asset('assets/admin')}}/assets/images/delete.png" height="15"></a></td>
+                                <td><a href="{{route('admin_message_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"  ><img src="{{asset('assets/admin')}}/assets/images/delete.png" height="15"></a></td>
                             </tr>
                         @endforeach
                         </tbody>
