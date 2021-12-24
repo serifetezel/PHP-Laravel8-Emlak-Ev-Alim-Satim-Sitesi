@@ -30,6 +30,7 @@ Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendmessage');
 Route::get('/home_detail/{id}', [HomeController::class, 'home_detail'])->name('home_detail');
+Route::get('/category_homes/{id}', [HomeController::class, 'category_homes'])->name('category_homes');
 
 
 Route::get('/admin', [\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin_home')->middleware('auth');

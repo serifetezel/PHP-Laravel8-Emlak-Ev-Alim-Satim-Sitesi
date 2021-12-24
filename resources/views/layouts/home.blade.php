@@ -36,6 +36,15 @@
     <meta name="twitter:url" content="" />
     <meta name="twitter:card" content="" />
 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="{{ asset('assets')}}/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="{{ asset('assets')}}/style.css"/>
+    <script src="{{ asset('assets')}}/http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="{{ asset('assets')}}/bootstrap/js/bootstrap.js"></script>
+    <script src="{{ asset('assets')}}/script.js"></script>
+
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="shortcut icon" href="favicon.ico">
 
@@ -61,6 +70,19 @@
 
     <link rel="stylesheet" href="{{ asset('assets')}}/css/style.css">
 
+    <!-- Owl stylesheet -->
+    <link rel="stylesheet" href="{{ asset('assets')}}/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="{{ asset('assets')}}/owl-carousel/owl.theme.css">
+    <script src="{{ asset('assets')}}/owl-carousel/owl.carousel.js"></script>
+    <!-- Owl stylesheet -->
+
+    <!-- slitslider -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets')}}/slitslider/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets')}}/slitslider/css/custom.css" />
+    <script type="text/javascript" src="{{ asset('assets')}}/slitslider/js/modernizr.custom.79639.js"></script>
+    <script type="text/javascript" src="{{ asset('assets')}}/slitslider/js/jquery.ba-cond.min.js"></script>
+    <script type="text/javascript" src="{{ asset('assets')}}/slitslider/js/jquery.slitslider.js"></script>
+    <!-- slitslider -->
 
     <!-- Modernizr JS -->
     <script src="{{ asset('assets')}}/js/modernizr-2.6.2.min.js"></script>
@@ -70,22 +92,14 @@
     <![endif]-->
     @yield("css")
     @yield("headerjs")
+    @yield('javascript')
 </head>
 <body>
 <div id="fh5co-wrapper">
     <div id="fh5co-page">
 @include('home._header')
 @section('content')
-@include('home._aside')
-@include('home._search')
-@include('home._features')
-@include('home._populer_properties')
-@include('home._happy_clients')
-@include('home._newest_properties')
-@include('home._our_agents')
-@include('home._recent_from_blog')
-@include('home._ask_an_agents')
-@show
+        @show
 @include('home._footer')
 
     </div>

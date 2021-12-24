@@ -10,6 +10,7 @@
                 @endphp
             <li style="background-image: url({{Storage::url($rs->image)}});" class="banner banner-1 @if($i==1) active @endif">
                 <div class="container-fluid">
+                    <div>
                     <div class="row">
                         <div class="col-md-4 col-md-offset-4 col-md-pull-4 js-fullheight slider-text">
                             <div class="slider-text-inner">
@@ -29,11 +30,12 @@
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
             </li>
             @endforeach
             <!--
-            <li style="background-image: url({{ asset('assets')}}/images/img_bg_2.jpg);">
+            <li style="background-image: url({{Storage::url($rs->image)}});">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-4 col-md-offset-4 col-md-pull-4 js-fullheight slider-text">
@@ -83,3 +85,4 @@
         </ul>
     </div>
 </aside>
+

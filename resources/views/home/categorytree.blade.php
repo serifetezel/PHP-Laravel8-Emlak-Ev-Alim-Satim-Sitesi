@@ -5,9 +5,9 @@
             <ul class="fh5co-sub-menu">
                 @include('home.categorytree',['children' => $subcategory->children])
             </ul>
-            <hr>
+
         @else
-        <li><a href="#">{{$subcategory->title}}</a> </li>
+        <li><a href="{{route('category_homes',['id'=>$subcategory->id])}}">{{$subcategory->title}}</a> </li>
         @endif
     </ul>
 @endforeach

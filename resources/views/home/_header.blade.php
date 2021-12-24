@@ -1,34 +1,31 @@
 
 <header id="fh5co-header-section" class="sticky-banner">
     <div class="container">
-        @php
-            $parentCategories = \App\Http\Controllers\HomeController::categorylist()
-        @endphp
+
         <div class="nav-header">
             <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
             <h1 id="fh5co-logo"><a href="{{route('home')}}"><i class="icon-home"></i>Home<span>state</span></a></h1>
             <!-- START #fh5co-menu-wrap -->
             <nav id="fh5co-menu-wrap" role="navigation">
+
                 <ul class="sf-menu" id="fh5co-primary-menu">
                 <li class="sf-menu" id="fh5co-primary-menu">
                     <li class="active"><a href="{{route('home')}}">Home</a></li>
                     <li>
                         <a href="properties.html"  class="fh5co-sub-ddown">Categories</a>
+                        @php
+                            $parentCategories = \App\Http\Controllers\HomeController::categorylist()
+                        @endphp
                         <ul class="fh5co-sub-menu">
                             @foreach($parentCategories as $rs)
                                 <li>
-                                    <a class="fh5co-sub-ddown" data-toggle="dropdown" aria-expanded="true">{{$rs->title}}<i class="fa fa-angle-right"></i></a>
-                                    <ul class="fh5co-sub-menu">
+                                    <a class="fh5co-sub-ddown" data-toggle="dropdown" aria-expanded="true">{{$rs->title}}
                                         <a class="fh5co-sub-ddown" data-toggle="dropdown" aria-expanded="true">
-                                            <ul class="fh5co-sub-menu">
-                                                <i class="fa fa-angle-right">
-                                                    @if(count($rs->children))
-                                                        @include('home.categorytree',['children' => $rs->children])
-                                                    @endif
-                                                </i>
-                                            </ul>
+                                            @if(count($rs->children))
+                                                @include('home.categorytree',['children' => $rs->children])
+                                            @endif
                                         </a>
-                                    </ul>
+                                    </a>
 
                                 </li>
                             @endforeach

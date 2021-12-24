@@ -29,7 +29,7 @@ class HomeController extends Controller
         #print_r($slider);
         #exit();
         $data=[
-        'setting'=>$setting,
+            'setting'=>$setting,
             'slider'=>$slider,
             'page'=>'home'
         ];
@@ -42,6 +42,15 @@ class HomeController extends Controller
         $data = Product::find($id);
         print_r($data);
         exit();
+    }
+
+    public function category_homes($id)
+    {
+        $datalist = Product::where('category_id',$id)->get();
+        $data = Category::find($id);
+        #print_r($data);
+        #exit();
+        return view('home.category_homes',['data'=>$data,'datalist'=>$datalist]);
     }
 
     public function aboutus()
