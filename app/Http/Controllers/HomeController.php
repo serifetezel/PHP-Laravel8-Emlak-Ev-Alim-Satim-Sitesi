@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Image;
 use App\Models\Message;
 use App\Models\Product;
 use App\Models\Setting;
@@ -26,11 +27,17 @@ class HomeController extends Controller
     {
         $setting = Setting::first();
         $slider = Product::select('id','title','image','price','detail','location','bathroom','room','description','area')->limit(5)->get();
-        #print_r($slider);
+        $popular = Product::select('id','title','image','price','detail','location','bathroom','room','description','area')->limit(3)->inRandomOrder()->get();
+        $newest = Product::select('id','title','image','price','detail','location','bathroom','room','description','area','floor','furnished')->limit(6)->orderByDesc('id')->get();
+        $picked = Product::select('id','title','image','price','detail','location','bathroom','room','description','area')->limit(3)->inRandomOrder()->get();
+        #print_r($newest);
         #exit();
         $data=[
             'setting'=>$setting,
             'slider'=>$slider,
+            'popular'=>$popular,
+            'newest'=>$newest,
+            'picked'=>$picked,
             'page'=>'home'
         ];
 
@@ -39,6 +46,16 @@ class HomeController extends Controller
 
     public function home_detail($id)
     {
+        $data = Product::find($id);
+        $datalist = Image::where('home_id',$id)->get();
+        #print_r($data);
+        #exit();
+        return view('home.home_detail',['data'=>$data,'datalist'=>$datalist]);
+    }
+
+    public function addtocart($id)
+    {
+        echo "Add to cart<br>";
         $data = Product::find($id);
         print_r($data);
         exit();

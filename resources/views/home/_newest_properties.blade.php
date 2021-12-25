@@ -3,29 +3,32 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
                 <h3>Newest Properties</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
+                <p>En yeni evler listemizde sizlerle...</p>
             </div>
         </div>
         <div class="row">
+            @foreach($newest as $rs)
             <div class="col-md-4 animate-box">
                 <div class="property">
-                    <a href="#" class="fh5co-property" style="background-image: url({{ asset('assets')}}/images/property-1.jpg);">
+                    <a href="{{route('home_detail',['id'=>$rs->id])}}" class="fh5co-property" style="background-image: url({{Storage::url($rs->image)}});">
                         <span class="status">Sale</span>
                         <ul class="list-details">
-                            <li>2000 ft sq<li>
-                            <li>5 Bedroom:</li>
-                            <li>4 Bathroom:</li>
-                            <li>3 Garage:</li>
+                            <li>{{$rs->area}} m2<li>
+                            <li>{{$rs->room}} Rooms</li>
+                            <li>{{$rs->bathroom}} Bathrooms</li>
+                            <li>{{$rs->floor}}. Kat</li>
                         </ul>
                     </a>
                     <div class="property-details">
-                        <h3>Properties Near in Beach</h3>
-                        <span class="price">$3,000</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores.</p>
-                        <span class="address"><i class="icon-map"></i>Thomas Street, St. Louis, MO 8990, USA</span>
+                        <h3>{{$rs->title}}</h3>
+                        <span class="price">{{$rs->price}} TL</span>
+                        <p>{{$rs->description}}</p>
+                        <span class="address"><i class="icon-map"></i>{{$rs->location}}</span>
                     </div>
                 </div>
             </div>
+            @endforeach
+            <!--
             <div class="col-md-4 animate-box">
                 <div class="property">
                     <a href="#" class="fh5co-property" style="background-image: url({{ asset('assets')}}/images/property-2.jpg);">
@@ -120,7 +123,7 @@
                         <span class="address"><i class="icon-map"></i>Thomas Street, St. Louis, MO 8990, USA</span>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
 </div>

@@ -128,7 +128,7 @@
                                             <br>
                                             <h4 style="text-align: center"><a href="property-detail.php">{{$rs->title}}</a></h4>
                                             <hr>
-                                            <h4 style="text-align: center"><a href="property-detail.php">{{$rs->location}}</a></h4>
+                                            <p style="text-align: center;"><a style="color: #686868" href="property-detail.php">{{$rs->location}}</a></p>
                                             <hr>
                                             <p class="price" style="text-align: center">Price: {{$rs->price}} TL</p>
                                             <div style="text-align:center" ><a class="btn btn-primary" href="property-detail.php">View Details</a></div>
