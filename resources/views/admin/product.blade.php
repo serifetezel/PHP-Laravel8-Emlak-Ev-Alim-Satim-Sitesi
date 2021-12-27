@@ -37,21 +37,9 @@
                             <th>Id</th>
                             <th>Category</th>
                             <th>Title(s)</th>
-                            <th>Keywords</th>
-                            <th>Description</th>
                             <th>Status</th>
                             <th>Price</th>
-                            <th>Area</th>
                             <th>Location</th>
-                            <th>Floor</th>
-                            <th>Room</th>
-                            <th>Furnished</th>
-                            <th>Bathroom</th>
-                            <th>Balcony</th>
-                            <th>Heating</th>
-                            <th>Garden</th>
-                            <th>Garage</th>
-                            <th>Detail</th>
                             <th>Image</th>
                             <th>Image Gallery</th>
                             <th>Edit</th>
@@ -64,21 +52,9 @@
                                 <td> {{ $rs->id }}</td>
                                 <td> {{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs->category,$rs->category->title) }}</td>
                                 <td> {{ $rs->title }}</td>
-                                <td> {{ $rs->keywords }}</td>
-                                <td> {{ $rs->description }}</td>
                                 <td> {{ $rs->status }}</td>
                                 <td> {{ $rs->price }}</td>
-                                <td> {{ $rs->area }}</td>
                                 <td> {{ $rs->location }}</td>
-                                <td> {{ $rs->floor }}</td>
-                                <td> {{ $rs->room }}</td>
-                                <td> {{ $rs->furnished }}</td>
-                                <td> {{ $rs->bathroom }}</td>
-                                <td> {{ $rs->balcony }}</td>
-                                <td> {{ $rs->heating }}</td>
-                                <td> {{ $rs->garden }}</td>
-                                <td> {{ $rs->garage }}</td>
-                                <td> {!! $rs->detail !!} </td>
                                 <td>
                                     @if ($rs->image)
                                         <img src="{{Storage::url($rs->image)}}" height="60" alt="">

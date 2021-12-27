@@ -87,9 +87,18 @@
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{route('admin_message')}}">
               <span class="menu-icon">
-                <i class="mdi mdi-laptop"></i>
+                <i class="mdi mdi-message-text"></i>
               </span>
                 <span class="menu-title">Contact Messages</span>
+                <i class="menu-arrow"></i>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{route('admin_faq')}}">
+              <span class="menu-icon">
+                <i class="mdi mdi-comment-question-outline"></i>
+              </span>
+                <span class="menu-title">FAQ</span>
                 <i class="menu-arrow"></i>
             </a>
         </li>

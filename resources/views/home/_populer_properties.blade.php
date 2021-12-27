@@ -6,31 +6,22 @@
                 <p>Konforunuza en uygun popüler evler listemizde sizlerle...</p>
             </div>
         </div>
-
         <div class="row">
+            @foreach($popular as $rs)
+                <div class="col-md-4 animate-box">
+                    <a href="{{route('home_detail',['id'=>$rs->id])}}" class="fh5co-property"
+                       style="background-image: url({{Storage::url($rs->image)}});">
+                        <span class="status">Sale</span>
+                        <div class="prop-details">
+                            <span class="price">{{$rs->price}} TL</span>
+                            <h3>{{$rs->title}}</h3>
+                        </div>
+                    </a>
+                    <div class="col-md-10">
+                        <span class="address"><i class="icon-map"></i> {{$rs->location}} </span></div>
 
-                @foreach($popular as $rs)
-            <div class="col-md-4 animate-box">
-
-                <a href="{{route('home_detail',['id'=>$rs->id])}}" class="fh5co-property" style="background-image: url({{Storage::url($rs->image)}});">
-                    <span class="status">Sale</span>
-                    <div class="prop-details">
-                        <span class="price">{{$rs->price}} TL</span>
-                        <h3>{{$rs->title}}</h3>
-                    </div>
-                </a>
-
-                <div class="col-md-10">
-                    <span class="address"><i class="icon-map"></i> {{$rs->location}} </span></div>
-
-                    <div class="pull-right"><span><a style="color: #00a045; height: 100px ; width:100px"  class="icon-shopping-cart" href="{{route('addtocart',['id'=>$rs->id])}}"></a></span>
-
-                    </div>
                 </div>
-
             @endforeach
-
         </div>
-
     </div>
 </div>

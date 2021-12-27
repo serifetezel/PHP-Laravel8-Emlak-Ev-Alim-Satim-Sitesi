@@ -9,7 +9,7 @@
     <div id="breadcrumb">
         <div class="container">
             <ul class="breadcrumb">
-                <li><a href="{{route('home')}}">Home</a> </li>
+                <li><a href="{{route('home')}}">Home</a></li>
                 <li class="active">Blank</li>
             </ul>
         </div>
@@ -18,7 +18,6 @@
 
 
     <div class="section">
-
         <div class="container">
 
             <div class="row">

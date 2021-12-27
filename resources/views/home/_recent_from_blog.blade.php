@@ -3,7 +3,8 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
                 <h3>Recent From Blog</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis
+                    accusamus asperiores sint consequuntur debitis.</p>
             </div>
         </div>
     </div>
@@ -17,7 +18,8 @@
                             <h3><a href="#">Properties for sale</a></h3>
                             <span class="posted_by">Sep. 15th</span>
                             <span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
                             <p><a href="#">Learn More...</a></p>
                         </div>
                     </div>
@@ -31,7 +33,8 @@
                             <h3><a href="#">Modern Home</a></h3>
                             <span class="posted_by">Sep. 15th</span>
                             <span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
                             <p><a href="#">Learn More...</a></p>
                         </div>
                     </div>
@@ -46,7 +49,8 @@
                             <h3><a href="#">15% Deal Discount For House</a></h3>
                             <span class="posted_by">Sep. 15th</span>
                             <span class="comment"><a href="">21<i class="icon-bubble2"></i></a></span>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+                                there live the blind texts.</p>
                             <p><a href="#">Learn More...</a></p>
                         </div>
                     </div>

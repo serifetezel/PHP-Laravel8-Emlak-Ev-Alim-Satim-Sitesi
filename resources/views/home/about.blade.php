@@ -32,9 +32,6 @@
             </ul>
         </div>
     </div>
-
-
-
     <div class="section">
 
         <div class="container">
@@ -44,5 +41,4 @@
             </div>
         </div>
     </div>
-
 @endsection

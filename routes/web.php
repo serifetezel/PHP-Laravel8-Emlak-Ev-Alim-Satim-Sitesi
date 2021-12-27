@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,10 +34,16 @@ Route::post('/sendmessage', [HomeController::class, 'sendmessage'])->name('sendm
 Route::get('/home_detail/{id}', [HomeController::class, 'home_detail'])->name('home_detail');
 Route::get('/category_homes/{id}', [HomeController::class, 'category_homes'])->name('category_homes');
 Route::get('/addtocart/{id}', [HomeController::class, 'addtocart'])->name('addtocart');
+Route::post('/gethome', [HomeController::class, 'gethome'])->name('gethome');
+Route::get('/homelist/{search}', [HomeController::class, 'homelist'])->name('homelist');
+
 
 Route::get('/admin', [\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin_home')->middleware('auth');
 
 Route::middleware('auth')->prefix('admin')->group(function (){
+
+    Route::middleware('admin')->group(function (){
+
 
    Route::get('/',[\App\Http\Controllers\Admin\HomeController::class,'index'])->name('admin_home');
 
@@ -77,7 +85,19 @@ Route::middleware('auth')->prefix('admin')->group(function (){
     #Setting
     Route::get('setting',[\App\Http\Controllers\Admin\SettingController::class,'index'])->name('admin_setting');
     Route::post('setting/update',[\App\Http\Controllers\Admin\SettingController::class,'update'])->name('admin_setting_update');
-});
+
+    #Faq
+    Route::prefix('faq')->group(function (){
+        Route::get('/',[FaqController::class,'index'])->name('admin_faq');
+        Route::get('create',[FaqController::class,'create'])->name('admin_faq_add');
+        Route::post('store',[FaqController::class,'store'])->name('admin_faq_store');
+        Route::get('edit/{id}',[FaqController::class,'edit'])->name('admin_faq_edit');
+        Route::post('update/{id}',[FaqController::class,'update'])->name('admin_faq_update');
+        Route::get('delete/{id}',[FaqController::class,'destroy'])->name('admin_faq_delete');
+        Route::get('show',[FaqController::class,'show'])->name('admin_faq_show');
+    });
+    }); #admin
+}); #auth
 
 Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
     Route::get('/',[UserController::class,'index'])->name('myprofile');
@@ -85,6 +105,26 @@ Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(fu
 
 Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){
     Route::get('/profile',[UserController::class,'index'])->name('userprofile');
+
+    #Product
+    Route::prefix('product')->group(function (){
+        Route::get('/',[ProductController::class,'index'])->name('user_products');
+        Route::get('create',[ProductController::class,'create'])->name('user_product_add');
+        Route::post('store',[ProductController::class,'store'])->name('user_product_store');
+        Route::get('edit/{id}',[ProductController::class,'edit'])->name('user_product_edit');
+        Route::post('update/{id}',[ProductController::class,'update'])->name('user_product_update');
+        Route::get('delete/{id}',[ProductController::class,'destroy'])->name('user_product_delete');
+        Route::get('show',[ProductController::class,'show'])->name('user_product_show');
+    });
+
+    #Home Image Gallery
+    Route::prefix('image')->group(function (){
+        Route::get('create/{home_id}',[\App\Http\Controllers\Admin\ImageController::class,'create'])->name('user_image_add');
+        Route::post('store/{home_id}',[\App\Http\Controllers\Admin\ImageController::class,'store'])->name('user_image_store');
+        Route::get('delete/{id}/{home_id}',[\App\Http\Controllers\Admin\ImageController::class,'destroy'])->name('user_image_delete');
+        Route::get('show',[\App\Http\Controllers\Admin\ImageController::class,'show'])->name('user_image_show');
+    });
+
 });
 
 Route::get('/admin/login', [HomeController::class, 'login'])->name('admin_login');

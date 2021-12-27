@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Livewire\Review;
 use App\Models\Category;
+use App\Models\Faq;
 use App\Models\Image;
 use App\Models\Message;
 use App\Models\Product;
 use App\Models\Setting;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use MongoDB\Driver\Session;
@@ -30,6 +33,9 @@ class HomeController extends Controller
         $popular = Product::select('id','title','image','price','detail','location','bathroom','room','description','area')->limit(3)->inRandomOrder()->get();
         $newest = Product::select('id','title','image','price','detail','location','bathroom','room','description','area','floor','furnished')->limit(6)->orderByDesc('id')->get();
         $picked = Product::select('id','title','image','price','detail','location','bathroom','room','description','area')->limit(3)->inRandomOrder()->get();
+        $faq = Faq::select('question','answer')->limit(3)->inRandomOrder()->get();
+        $user = User::select('name','email','phone')->get();
+
         #print_r($newest);
         #exit();
         $data=[
@@ -38,6 +44,8 @@ class HomeController extends Controller
             'popular'=>$popular,
             'newest'=>$newest,
             'picked'=>$picked,
+            'faq'=>$faq,
+            'user'=>$user,
             'page'=>'home'
         ];
 
@@ -48,9 +56,30 @@ class HomeController extends Controller
     {
         $data = Product::find($id);
         $datalist = Image::where('home_id',$id)->get();
+        #$reviews = Review::where('home_id',$id)->get();
         #print_r($data);
         #exit();
         return view('home.home_detail',['data'=>$data,'datalist'=>$datalist]);
+    }
+
+    public function gethome(Request $request)
+    {
+        $search=$request->input('search');
+        $count=Product::where('title','like','%'.$search.'%')->get()->count();
+        if($count==1)
+        {
+            $data = Product::where('title','like','%'.$search.'%')->first();
+            return redirect()->route('home_detail',['id'=>$data->id]);
+        }
+        else{
+            return redirect()->route('homelist',['search'=>$search]);
+        }
+    }
+
+    public function homelist($search)
+    {
+        $datalist = Product::where('title','like','%'.$search.'%')->get();
+        return view('home.search_homes',['search'=>$search,'datalist'=>$datalist]);
     }
 
     public function addtocart($id)
@@ -93,7 +122,8 @@ class HomeController extends Controller
     }
     public function blog()
     {
-        return view('home');
+        $datalist = Faq::all()->sortBy('position');
+        return view('home.blog',['datalist'=>$datalist]);
     }
     public function contact()
     {
