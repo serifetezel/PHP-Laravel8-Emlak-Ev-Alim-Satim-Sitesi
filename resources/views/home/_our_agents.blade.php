@@ -1,17 +1,20 @@
 <div id="fh5co-about" class="fh5co-agent">
-    <div class="container">
+    <div class="container" >
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
                 <h3>Our Agents</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row" >
+            @foreach($user as $rs)
             <div class="col-sm-3 text-center animate-box" data-animate-effect="fadeIn">
                 <div class="fh5co-staff">
                     <img class="img-responsive" src="{{ asset('assets')}}/images/user-1.jpg" alt="Free HTML5 Templates by freeHTML5.co">
-                    <h3>Jean Smith</h3>
-                    <p>Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat</p>
+                    <h3>{{$rs->name}}</h3>
+                    <p>{{$rs->email}}</p>
+                    <p>{{$rs->address}}</p>
+                    <p>{{$rs->phone}}</p>
                     <p class="fh5co-social-icons">
                         <a href="#"><i class="icon-twitter2"></i></a>
                         <a href="#"><i class="icon-facebook2"></i></a>
@@ -21,6 +24,8 @@
                     </p>
                 </div>
             </div>
+        @endforeach
+            <!--
             <div class="col-sm-3 text-center animate-box" data-animate-effect="fadeIn">
                 <div class="fh5co-staff">
                     <img class="img-responsive" src="{{ asset('assets')}}/images/user-2.jpg" alt="Free HTML5 Templates by freeHTML5.co">
@@ -63,6 +68,7 @@
                     </p>
                 </div>
             </div>
+            -->
         </div>
     </div>
 </div>

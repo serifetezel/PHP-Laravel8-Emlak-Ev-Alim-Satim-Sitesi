@@ -1,6 +1,10 @@
 <nav class="navbar p-0 fixed-top d-flex flex-row">
     <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{ asset('assets/admin')}}/assets/images/logo-mini.svg" alt="logo" /></a>
+        <a class="navbar-brand brand-logo-mini" href="{{url('/')}}/admin">
+            @if (Auth::user()->profile_photo_path)
+                <img src="{{Storage::url(Auth::user()->profile_photo_path)}}" height="50" style="border-radius: 10px" alt="">
+            @endif
+        </a>
     </div>
     <div class="navbar-menu-wrapper flex-grow d-flex align-items-stretch">
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -151,7 +155,10 @@
             <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                     <div class="navbar-profile">
-                        <img class="img-xs rounded-circle" src="{{ asset('assets/admin')}}/assets/images/faces/face15.jpg" alt="">
+
+                        @if (Auth::user()->profile_photo_path)
+                            <img src="{{Storage::url(Auth::user()->profile_photo_path)}}" height="50" style="border-radius: 10px" alt="">
+                        @endif
                         <!--<p class="mb-0 d-none d-sm-block navbar-profile-name">Henry Klein</p>-->
                         @auth
                         <a href="#" style="font-size:12px; color:#cbd5e0" class="mb-0 d-none d-sm-block navbar-profile-name">{{ Auth::user()->name }}</a>

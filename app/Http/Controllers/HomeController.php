@@ -34,7 +34,8 @@ class HomeController extends Controller
         $newest = Product::select('id','title','image','price','detail','location','bathroom','room','description','area','floor','furnished')->limit(6)->orderByDesc('id')->get();
         $picked = Product::select('id','title','image','price','detail','location','bathroom','room','description','area')->limit(3)->inRandomOrder()->get();
         $faq = Faq::select('question','answer')->limit(3)->inRandomOrder()->get();
-        $user = User::select('name','email','phone')->get();
+        $user = User::select('name','email','phone')->limit(4)->inRandomOrder()->get();
+
 
         #print_r($newest);
         #exit();
@@ -46,6 +47,7 @@ class HomeController extends Controller
             'picked'=>$picked,
             'faq'=>$faq,
             'user'=>$user,
+
             'page'=>'home'
         ];
 
@@ -80,6 +82,12 @@ class HomeController extends Controller
     {
         $datalist = Product::where('title','like','%'.$search.'%')->get();
         return view('home.search_homes',['search'=>$search,'datalist'=>$datalist]);
+    }
+
+    public function allhome()
+    {
+        $datalist = Product::all();
+        return view('home.all_homes',['datalist'=>$datalist]);
     }
 
     public function addtocart($id)

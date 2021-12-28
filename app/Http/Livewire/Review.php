@@ -12,7 +12,7 @@ class Review extends Component
 
     public function mount($id)
     {
-        $this->record=Product::FindOrFail($id);
+        $this->record=Product::findOrFail($id);
         $this->home_id = $this->record->id;
     }
 
@@ -39,12 +39,12 @@ class Review extends Component
         ]);
 
         \App\Models\Review::create([
-            'home_id' => $this->home_id,
-            'user_id' => Auth::id(),
-            'IP' => $_SERVER['REMOTE_ADDR'],
-            'rate' => $this->rate,
-            'subject' => $this->subject,
-            'review' => $this->review
+            'home_id' =>$this->home_id,
+            'user_id'=>Auth::id(),
+            'IP'=>$_SERVER['REMOTE_ADDR'],
+            'rate' =>$this->rate,
+            'subject'=>$this->subject,
+            'review'=>$this->review
         ]);
 
         session()->flash('message','Revire Send Successfully');

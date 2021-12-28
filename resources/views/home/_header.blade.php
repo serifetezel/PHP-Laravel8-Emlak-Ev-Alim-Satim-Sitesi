@@ -21,7 +21,7 @@
                                 <li>
                                     <a class="fh5co-sub-ddown" data-toggle="dropdown" aria-expanded="true">{{$rs->title}}
 
-                                        <a class="fh5co-sub-ddown" data-toggle="dropdown" aria-expanded="true">
+                                        <a class="fh5co-sub-ddown" @if(!isset($page)) show-on-click @endif data-toggle="dropdown" aria-expanded="true">
 
                                             @if(count($rs->children))
                                                 @include('home.categorytree',['children' => $rs->children])
@@ -36,21 +36,7 @@
                         </ul>
                     </li>
 
-                    <li>
-                        <a href="properties.html"  class="fh5co-sub-ddown @if(!isset($page)) show-on-click @endif">Properties</a>
-                        <ul class="fh5co-sub-menu">
-                            <li class="fh5co-sub-menu">
-
-                                    <li><a href="#">Family</a></li>
-                                    <li><a href="#">CSS3 &amp; HTML5</a></li>
-
-                            </li>
-                            <li><a href="#">CSS3 &amp; HTML5</a></li>
-                            <li><a href="#">Angular JS</a></li>
-                            <li><a href="#">Node JS</a></li>
-                            <li><a href="#">Django &amp; Python</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="{{route('allhome')}}">All Homes</a></li>
                     <li><a href="{{route('aboutus')}}">About Us</a></li>
                     <li><a href="{{route('references')}}">References</a></li>
                     <li><a href="agent.html">Agent</a></li>
@@ -67,7 +53,7 @@
                             <div style="text-align: center">
                             @auth
                                 <img src="{{ Auth::user()->profile_photo_url}}" height="35" width="35">
-                                <a href="#" style="font-size:12px; color:#0a0a0a" class="fh5co-sub-ddown" data-toggle="dropdown" aria-expanded="true">{{ Auth::user()->name }} {{Auth::user()->roles->pluck('name')}}</a>
+                                <a href="#" style="font-size:12px; color:#0a0a0a" class="fh5co-sub-ddown" data-toggle="dropdown" aria-expanded="true">{{ Auth::user()->name }}</a>
                             @endauth</div>
                             <ul class="fh5co-sub-menu">
                                 <li><a href="{{route('myprofile')}}" onclick="return !window.open(this.href, '','top=50 left=100,width=1100,height=700')">

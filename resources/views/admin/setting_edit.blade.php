@@ -144,19 +144,25 @@
                                             <div class="tab-pane fade" id="nav-about_s2" role="tabpanel" aria-labelledby="nav-about-tab">
                                                 <div class="form-group" >
                                                     <label >About us</label>
+                                                    <div style="background-color:#8d9498">
                                                     <textarea id="aboutus" name="aboutus">{{$data->aboutus}}</textarea>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="nav-contact_s2" role="tabpanel" aria-labelledby="nav-contact-tab">
                                                 <div class="form-group" >
                                                     <label >Contact</label>
+                                                    <div style="background-color:#8d9498">
                                                     <textarea id="contact" name="contact">{{$data->contact}}</textarea>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="nav-reference_s2" role="tabpanel" aria-labelledby="nav-reference-tab">
                                                 <div class="form-group"  >
                                                     <label >References</label>
+                                                    <div style="background-color:#8d9498">
                                                     <textarea id="references" name="references">{{$data->references}}</textarea>
+                                                    </div>
                                                 </div>
                                                 <script>
                                                     $(document).ready(function() {
@@ -183,7 +189,7 @@
                                                     $('#aboutus').summernote({
                                                         placeholder: '',
                                                         tabsize: 2,
-                                                        height: 120,
+                                                        height: 200,
                                                         toolbar: [
                                                             ['style', ['style']],
                                                             ['font', ['bold', 'underline', 'clear']],

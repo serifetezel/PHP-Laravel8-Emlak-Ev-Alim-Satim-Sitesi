@@ -71,30 +71,14 @@
 
                     </table>
                     </div>
-                    <div class="row align-items-center mt-3">
-                        <div class="pagination d-none"></div>
-                        <div class="col">
-                            <p class="mb-0 fs--1">
-                                <span class="d-none d-sm-inline-block" data-list-info="data-list-info"></span>
-                                <span class="d-none d-sm-inline-block"> &mdash; </span>
-                                <a class="fw-semi-bold" href="#!" data-list-view="*">View all<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a><a class="fw-semi-bold d-none" href="#!" data-list-view="less">View Less<span class="fas fa-angle-right ms-1" data-fa-transform="down-1"></span></a>
-                            </p>
-                        </div>
-                        <div class="col-auto d-flex"><button class="btn btn-sm btn-primary" type="button" data-list-pagination="prev"><span>Previous</span></button><button class="btn btn-sm btn-primary px-4 ms-2" type="button" data-list-pagination="next"><span>Next</span></button></div>
-                    </div>
+
 
                 </div>
                     </div>
                 </div>
                 <!-- /.box-body -->
                 <div class="card-footer clearfix">
-                    <ul class="pagination pagination-sm no-margin pull-right">
-                        <li><a href="#">«</a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">»</a></li>
-                    </ul>
+
                 </div>
                 <!-- /.box-footer-->
             </div>

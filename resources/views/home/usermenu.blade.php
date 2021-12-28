@@ -10,7 +10,12 @@
         <li><a href="#">My Reviews</a> </li>
         <hr><br>
         <li><a href="{{route('logout')}}">Logout</a> </li>
-
+        @php
+        $userRoles = Auth::user()->roles->pluck('name');
+        @endphp
+        @if($userRoles->contains('admin'))
+            <li><a href="{{route('admin_home')}}" target="_blank">Admin Panel</a> </li>
+        @endif
     </ul>
 </div>
 @endauth

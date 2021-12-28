@@ -8,14 +8,16 @@
             <div class="profile-desc">
                 <div class="profile-pic">
                     <div class="count-indicator">
-                        <img class="img-xs rounded-circle " src="{{ asset('assets/admin')}}/assets/images/faces/face15.jpg" alt="">
+                        @if (Auth::user()->profile_photo_path)
+                            <img src="{{Storage::url(Auth::user()->profile_photo_path)}}" height="50" style="border-radius: 10px" alt="">
+                        @endif
                         <span class="count bg-success"></span>
                     </div>
                     <div class="profile-name">
                         <!--<h5 class="mb-0 font-weight-normal">Henry Klein</h5>
                         <span>Gold Member</span>-->
                         @auth
-                            <a href="#" class="d-block" style="font-size:15px; color:#cbd5e0">{{ Auth::user()->name }}</a>
+                            <a href="{{url('/')}}/admin" class="d-block" style="font-size:15px; color:#cbd5e0">{{ Auth::user()->name }}</a>
                             <a style="font-size:15px; color:#cbd5e0" href="{{ route('logout') }}" class="d-block">Logout</a>
                         @endauth
                     </div>
@@ -99,6 +101,15 @@
                 <i class="mdi mdi-comment-question-outline"></i>
               </span>
                 <span class="menu-title">FAQ</span>
+                <i class="menu-arrow"></i>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
+            <a class="nav-link" href="{{route('admin_users')}}">
+              <span class="menu-icon">
+                <i class="mdi mdi-account-multiple"></i>
+              </span>
+                <span class="menu-title">Users</span>
                 <i class="menu-arrow"></i>
             </a>
         </li>

@@ -174,7 +174,8 @@
                                 <p class="area"><span class="glyphicon glyphicon-map-marker"></span>{{$data->location}}</p>
                                 <div class="profile">
                                     <span class="glyphicon glyphicon-user"></span> Agent Details
-                                    <p>Şerife Tezel<br>0451 656 56 94</p>
+                                    <p>Şerife Tezel</p>
+                                     <p>0451 656 56 94</p>
                                 </div>
                             </div>
 
