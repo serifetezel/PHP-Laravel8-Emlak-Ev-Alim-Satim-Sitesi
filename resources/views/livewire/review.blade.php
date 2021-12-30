@@ -5,7 +5,9 @@
         </div>
     @endif
 
-    <form role="form" wire:submit.prevent="store">
+
+    <form wire:submit.prevent="store">
+
         @csrf
         <input type="text" wire:model="subject" class="form-control" placeholder="Subject"/>
         @error('subject')<span class="text-danger">{{$message}}</span>@enderror
@@ -29,9 +31,9 @@
         </div>
         <br>
         @auth
-        <button type="submit" class="btn btn-primary" name="Submit">Save </button>
+            <input type="submit" class="btn btn-primary" value="Kaydet" name="Submit"/>
         @else
-        <a href="/login" class="primary-btn">For Submit Your Review, Please Login</a>
+            <a href="/login" class="primary-btn">For Submit Your Review, Please Login</a>
         @endauth
     </form>
 </div>

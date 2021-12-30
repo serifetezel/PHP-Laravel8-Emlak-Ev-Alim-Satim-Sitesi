@@ -26,6 +26,16 @@ class HomeController extends Controller
         return Setting::first();
     }
 
+    public static function countreview($id)
+    {
+        return \App\Models\Review::where('home_id', $id)->count();
+    }
+
+    public static function avrgreview($id)
+    {
+        return \App\Models\Review::where('home_id', $id)->average('rate');
+    }
+
     public function index()
     {
         $setting = Setting::first();
@@ -34,7 +44,7 @@ class HomeController extends Controller
         $newest = Product::select('id','title','image','price','detail','location','bathroom','room','description','area','floor','furnished')->limit(6)->orderByDesc('id')->get();
         $picked = Product::select('id','title','image','price','detail','location','bathroom','room','description','area')->limit(3)->inRandomOrder()->get();
         $faq = Faq::select('question','answer')->limit(3)->inRandomOrder()->get();
-        $user = User::select('name','email','phone')->limit(4)->inRandomOrder()->get();
+        $user = User::select('name','email','phone','profile_photo_path','address')->limit(4)->inRandomOrder()->get();
 
 
         #print_r($newest);
@@ -58,10 +68,10 @@ class HomeController extends Controller
     {
         $data = Product::find($id);
         $datalist = Image::where('home_id',$id)->get();
-        #$reviews = Review::where('home_id',$id)->get();
+        $reviews = \App\Models\Review::where('home_id',$id)->get();
         #print_r($data);
         #exit();
-        return view('home.home_detail',['data'=>$data,'datalist'=>$datalist]);
+        return view('home.home_detail',['data'=>$data,'datalist'=>$datalist,'reviews'=>$reviews]);
     }
 
     public function gethome(Request $request)

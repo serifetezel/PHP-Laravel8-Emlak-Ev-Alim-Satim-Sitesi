@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
@@ -83,6 +84,14 @@ Route::middleware('auth')->prefix('admin')->group(function (){
         Route::get('show',[\App\Http\Controllers\Admin\ImageController::class,'show'])->name('admin_image_show');
     });
 
+    #Review
+    Route::prefix('review')->group(function (){
+        Route::get('/',[ReviewController::class,'index'])->name('admin_review');
+        Route::post('update/{id}',[ReviewController::class,'update'])->name('admin_review_update');
+        Route::get('delete/{id}',[ReviewController::class,'destroy'])->name('admin_review_delete');
+        Route::get('show/{id}',[ReviewController::class,'show'])->name('admin_review_show');
+    });
+
     #Setting
     Route::get('setting',[\App\Http\Controllers\Admin\SettingController::class,'index'])->name('admin_setting');
     Route::post('setting/update',[\App\Http\Controllers\Admin\SettingController::class,'update'])->name('admin_setting_update');
@@ -117,6 +126,8 @@ Route::middleware('auth')->prefix('admin')->group(function (){
 
 Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
     Route::get('/',[UserController::class,'index'])->name('myprofile');
+    Route::get('/myreviews',[UserController::class,'myreviews'])->name('myreviews');
+    Route::get('/destroymyreview/{id}', [\App\Http\Controllers\UserController::class, 'destroymyreview'])->name('user_review_delete');
 });
 
 Route::middleware('auth')->prefix('user')->namespace('user')->group(function (){

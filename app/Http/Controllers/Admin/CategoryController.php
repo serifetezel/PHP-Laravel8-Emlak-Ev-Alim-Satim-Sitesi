@@ -33,6 +33,7 @@ class CategoryController extends Controller
     public function index()
     {
         $datalist = DB::select('select * from categories');
+        #$datalist = Category::with('children')->get();
         return view('admin.category', ['datalist' => $datalist]);
     }
 

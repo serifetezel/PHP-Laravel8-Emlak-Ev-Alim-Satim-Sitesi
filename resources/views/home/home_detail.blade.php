@@ -152,7 +152,18 @@
                             <!-- #Slider Ends -->
                         </div>
 
-
+                        @php
+                            $avrgrev = \App\Http\Controllers\HomeController::avrgreview($data->id);
+                            $countreview = \App\Http\Controllers\HomeController::countreview($data->id);
+                        @endphp
+                        <div>
+                            <i class="fa fa-star @if($avrgrev<1) -o empty @endif"></i>
+                            <i class="fa fa-star @if($avrgrev<2) -o empty @endif"></i>
+                            <i class="fa fa-star @if($avrgrev<3) -o empty @endif"></i>
+                            <i class="fa fa-star @if($avrgrev<4) -o empty @endif"></i>
+                            <i class="fa fa-star @if($avrgrev<5) -o empty @endif"></i>
+                        </div>
+                        <a href="#tab2">{{$countreview}} Review(s){{$avrgrev}} / Add Review</a>
                             <br><br>
                         <div class="spacer"><h4><span class="glyphicon glyphicon-th-list"></span>Descriptions of the Home</h4>
                         <p>{!! $data->description !!}</p>
@@ -183,10 +194,42 @@
                         <div class="col-lg-12 col-sm-6 ">
                             <div class="enquiry">
                                 <h5><span class="glyphicon glyphicon-envelope"></span> WRITE YOUR REVIEW </h5>
+                                @livewireStyles
+                                @livewireScripts
                                 @livewire('review', ['id' => $data->id])
                             </div>
                         </div>
                         <br>
+                        <br>
+                        <div class="col-lg-12 col-sm-6 ">
+                            <div class="property-info">
+                                <hr>
+                                <br>
+                                <h5><span class="icon-message"></span> REVIEWS ({{$countreview}}) </h5>
+                                @foreach($reviews as $rs)
+                                    <div class="single">
+
+                                        <div class="heading">
+                                            <div><a href="#"><i class="icon-user3"></i>{{$rs->user->name}}</a></div>
+                                            <div><a href="#"><i class="icon-clock4"></i>{{$rs->created_at}}</a></div>
+
+                                            <div>
+                                                <i class="fa fa-star @if($rs->rate<1) -o empty @endif"></i>
+                                                <i class="fa fa-star @if($rs->rate<2) -o empty @endif"></i>
+                                                <i class="fa fa-star @if($rs->rate<3) -o empty @endif"></i>
+                                                <i class="fa fa-star @if($rs->rate<4) -o empty @endif"></i>
+                                                <i class="fa fa-star @if($rs->rate<5) -o empty @endif"></i>
+                                            </div>
+                                        </div>
+                                        <div class="body">
+                                            <strong>{{$rs->subject}}</strong>
+                                            <p>{{$rs->review}}</p>
+                                        </div>
+
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
 
                     </div>
 

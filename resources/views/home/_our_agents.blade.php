@@ -7,24 +7,35 @@
             </div>
         </div>
         <div class="row" >
-            @foreach($user as $rs)
-            <div class="col-sm-3 text-center animate-box" data-animate-effect="fadeIn">
-                <div class="fh5co-staff">
-                    <img class="img-responsive" src="{{ asset('assets')}}/images/user-1.jpg" alt="Free HTML5 Templates by freeHTML5.co">
-                    <h3>{{$rs->name}}</h3>
-                    <p>{{$rs->email}}</p>
-                    <p>{{$rs->address}}</p>
-                    <p>{{$rs->phone}}</p>
-                    <p class="fh5co-social-icons">
-                        <a href="#"><i class="icon-twitter2"></i></a>
-                        <a href="#"><i class="icon-facebook2"></i></a>
-                        <a href="#"><i class="icon-instagram"></i></a>
-                        <a href="#"><i class="icon-dribbble2"></i></a>
-                        <a href="#"><i class="icon-youtube"></i></a>
-                    </p>
-                </div>
-            </div>
-        @endforeach
+            @auth
+                @php
+                    $userRoles = Auth::user()->roles->pluck('name');
+                @endphp
+                @if($userRoles->contains('admin'))
+                    @foreach($user as $rs)
+                        <div class="col-sm-3 text-center animate-box" data-animate-effect="fadeIn">
+                            <div class="fh5co-staff">
+                                @if ($rs->profile_photo_path)
+                                    <img src="{{Storage::url($rs->profile_photo_path)}}" height="50" style="border-radius: 150px" alt="">
+                                @endif
+                                <h3>{{$rs->name}}</h3>
+                                <p>{{$rs->email}}</p>
+                                <p>{{$rs->address}}</p>
+                                <p>{{$rs->phone}}</p>
+                                    <!--
+                                <p class="fh5co-social-icons">
+                                    <a href="#"><i class="icon-twitter2"></i></a>
+                                    <a href="#"><i class="icon-facebook2"></i></a>
+                                    <a href="#"><i class="icon-instagram"></i></a>
+                                    <a href="#"><i class="icon-dribbble2"></i></a>
+                                    <a href="#"><i class="icon-youtube"></i></a>
+                                </p>
+                                -->
+                            </div>
+                        </div>
+                    @endforeach
+                @endif
+            @endauth
             <!--
             <div class="col-sm-3 text-center animate-box" data-animate-effect="fadeIn">
                 <div class="fh5co-staff">

@@ -7,9 +7,10 @@
         <hr><br>
         <li><a href="{{route('user_products')}}">My Homes</a> </li>
         <hr><br>
-        <li><a href="#">My Reviews</a> </li>
+        <li><a href="{{route('myreviews')}}">My Reviews</a> </li>
         <hr><br>
         <li><a href="{{route('logout')}}">Logout</a> </li>
+        <hr><br>
         @php
         $userRoles = Auth::user()->roles->pluck('name');
         @endphp

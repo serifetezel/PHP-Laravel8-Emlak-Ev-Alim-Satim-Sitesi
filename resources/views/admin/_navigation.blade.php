@@ -114,11 +114,11 @@
             </a>
         </li>
         <li class="nav-item menu-items">
-            <a class="nav-link" href="pages/forms/basic_elements.html">
+            <a class="nav-link" href="{{route('admin_review')}}">
               <span class="menu-icon">
                 <i class="mdi mdi-playlist-play"></i>
               </span>
-                <span class="menu-title">Form Elements</span>
+                <span class="menu-title">Reviews</span>
             </a>
         </li>
         <li class="nav-item menu-items">

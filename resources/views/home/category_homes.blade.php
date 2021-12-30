@@ -144,13 +144,13 @@
 
                                     </div>
                                     <br>
-                                    <div class="row">
+                                    <div class="row" >
                                     @foreach($datalist as $rs)
                                         <!-- properties -->
                                             <div class="col-lg-4 col-sm-6">
                                                 <div class="properties">
                                                     <div class="image-holder"
-                                                         style="text-align: right; background-color:#00a045"><img
+                                                         style="text-align: right; background-color:#00a045;" ><img
                                                             src="{{Storage::url($rs->image)}}" class="img-responsive"
                                                             alt="properties">
                                                         <div class="status sold" style="color:#FFFFFF; ">Sold</div>

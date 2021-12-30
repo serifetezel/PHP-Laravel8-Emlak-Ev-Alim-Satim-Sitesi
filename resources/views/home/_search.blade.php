@@ -125,22 +125,27 @@
                 </div>
                 -->
                 <div class="col-xxs-12 col-xs-12 text-center">
-                    <p><a class="btn btn-primary btn-lg" href="#">Learn More</a></p>
+                    <p><a class="btn btn-primary btn-lg" href="#">Learn More</a></p><br>
                 </div>
+                <hr>
                 <br><br>
                 <div class="s-holder">
-                    <h4><span class="glyphicon glyphicon-search"></span> Search for</h4>
+                    <h3><span class="glyphicon glyphicon-search"></span>Search Button</h3>
+
                     <form action="{{route('gethome')}}" method="post">
                         @csrf
-                        <table>
-                            <div class="row">
-                            <tr >
+
+                        <table style="width: 500px">
+                            <div style="text-align: left">
+
+                            <tr>
                                 <td>@livewire('search')<br></td><br>
                             </tr></div>
                             <tr style="text-align:left">
                                 <td>
+                                    <br>
                                     <div class="row">
-                                        <p><a class="btn btn-primary btn-lg" href="#">Learn More</a></p>
+                                        <p><a class="btn btn-primary btn-lg" href="#">Find Now</a></p>
                                     </div>
                                 </td>
                             </tr>

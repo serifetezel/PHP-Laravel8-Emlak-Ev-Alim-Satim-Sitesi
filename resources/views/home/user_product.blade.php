@@ -70,11 +70,11 @@
                                         <img src="{{Storage::url($rs->image)}}" height="60" alt="">
                                     @endif
                                 </td>
-                                <td><a href="{{route('user_image_add',['home_id'=>$rs->id])}}" onclick="return !window.open(this.href, '','top=50 left=100,width=1100,height=700')">
+                                <td style="text-align: center"><a href="{{route('user_image_add',['home_id'=>$rs->id])}}" onclick="return !window.open(this.href, '','top=50 left=100,width=1100,height=700')">
                                         <img src="{{asset('assets/admin')}}/assets/images/gallery.png" height="25"></a>
                                 </td>
                                 <td><a href="{{route('user_product_edit', ['id' => $rs->id])}}">Edit</a></td>
-                                <td><a href="{{route('user_product_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"  ><img src="{{asset('assets/admin')}}/assets/images/delete.png" height="15"></a></td>
+                                <td style="text-align: center"><a href="{{route('user_product_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"  ><img src="{{asset('assets/admin')}}/assets/images/delete.png" height="25" ></a></td>
                             </tr>
                         @endforeach
                         </tbody>

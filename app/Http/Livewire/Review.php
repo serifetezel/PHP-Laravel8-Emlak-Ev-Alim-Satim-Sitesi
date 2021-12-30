@@ -47,7 +47,7 @@ class Review extends Component
             'review'=>$this->review
         ]);
 
-        session()->flash('message','Revire Send Successfully');
+        session()->flash('message','Review Send Successfully');
         $this->resetInput();
     }
 }
