@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
                 <h3>Popular Properties</h3>
-                <p>Konforunuza en uygun popüler evler listemizde sizlerle...</p>
+                <p>The most suitable popular houses for your comfort are with you on our site...</p>
             </div>
         </div>
         <div class="row">

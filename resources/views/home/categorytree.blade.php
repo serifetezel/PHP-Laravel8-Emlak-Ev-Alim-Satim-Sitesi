@@ -3,10 +3,15 @@
         @if(count($subcategory->children))
             <li style="color: #1D00AF; font-family:'Arial Black'">{{$subcategory->title}}</li>
             <ul class="fh5co-sub-menu">
+                <li>
+
                 @include('home.categorytree',['children' => $subcategory->children])
+
+                </li>
             </ul>
 
         @else
+
         <li><a href="{{route('category_homes',['id'=>$subcategory->id])}}">{{$subcategory->title}}</a> </li>
         @endif
     </ul>

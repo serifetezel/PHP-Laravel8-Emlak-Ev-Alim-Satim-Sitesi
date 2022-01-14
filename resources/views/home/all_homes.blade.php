@@ -40,7 +40,7 @@
 
                                                 <div class="fh5co-property"
                                                    style="background-image: url({{Storage::url($rs->image)}});">
-                                                    <div class="status sold" style="color:#FFFFFF; ">Sold</div></div>
+                                                    <div class="status sold" style="color:#FFFFFF; ">Sale</div></div>
 
                                                     <h4 style="text-align: center"><a
                                                             href="property-detail.php">{{$rs->title}}</a></h4>

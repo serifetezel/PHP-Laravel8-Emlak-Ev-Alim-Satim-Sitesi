@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
                 <h3>Our Agents</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis accusamus asperiores sint consequuntur debitis.</p>
+                <p>We work for you with our team...</p>
             </div>
         </div>
         <div class="row" >

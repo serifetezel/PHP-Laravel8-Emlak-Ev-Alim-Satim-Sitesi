@@ -52,7 +52,6 @@
                                 </select>
                             </div>
                         <button type="submit" class="btn btn-primary mr-2">Add Category</button>
-                        <button class="btn btn-dark">Cancel</button>
                         </div>
                     </form>
         <!-- /.box-body -->

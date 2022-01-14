@@ -7,7 +7,7 @@ $setting=\App\Http\Controllers\HomeController::getSetting()
             <div class="row row-bottom-padded-md">
                 <div class="col-md-3">
                     <h3 class="section-title">About Company</h3>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics.</p>
+                    <p>HOMESTATE, which is the first address that comes to mind in all kinds of real estate ads and shopping such as houses and offices, has been offering the most suitable and most comfortable real estate ads to its users for many years.</p>
                     <strong style="color: #cbd5e0">Company  :</strong> {{$setting->company}}<br>
                     <strong style="color: #cbd5e0">Address  :</strong> {{$setting->address}}<br>
                     <strong style="color: #cbd5e0">Phone  :</strong> {{$setting->phone}}<br>
@@ -18,10 +18,8 @@ $setting=\App\Http\Controllers\HomeController::getSetting()
                 <div class="col-md-3 col-md-push-1">
                     <h3 class="section-title">My Account</h3>
                     <ul>
-                        <li><a href="#">My Account</a></li>
-                        <li><a href="#">My Wishlist</a></li>
-                        <li><a href="#">Compare</a></li>
-                        <li><a href="#">Chheckout</a></li>
+                        <li><a href="{{route('myprofile')}}">My Account</a></li>
+                        <li><a href="{{route('user_products')}}">My Product List</a></li>
                         <li><a href="{{route('admin_login')}}">Login</a></li>
                     </ul>
                 </div>
@@ -29,12 +27,12 @@ $setting=\App\Http\Controllers\HomeController::getSetting()
                 <div class="col-md-3 col-md-push-1">
                     <h3 class="section-title">Customer Service</h3>
                     <ul>
-                        <li><a href="#">Our Agents</a></li>
-                        <li><a href="#">Properties</a></li>
-                        <li><a href="#">Agent</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">API</a></li>
-                        <li><a href="#">FAQ / Contact</a></li>
+                        <li><a href="{{route('aboutus')}}">About Us</a></li>
+                        <li><a href="{{route('blog')}}">Blog</a></li>
+                        <li><a href="{{route('blog')}}">FAQ </a></li>
+                        <li><a href="{{route('contact')}}">Contact</a></li>
+                        <li><a href="{{route('references')}}">References</a></li>
+                        <li><a href="{{route('allhome')}}">All Homes</a></li>
                     </ul>
                 </div>
 

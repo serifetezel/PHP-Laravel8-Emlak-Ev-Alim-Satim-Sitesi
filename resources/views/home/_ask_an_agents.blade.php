@@ -3,13 +3,12 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12 col-md-offset-0 text-center heading-section animate-box">
-                    <h3>Ask an agent, We're here to help 24/7</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit est facilis maiores, perspiciatis
-                        accusamus asperiores sint consequuntur debitis.</p>
+                    <h3>Ask an agent,</h3>
+                    <h3>We're here to help 24/7</h3>
+                    <p>We are always here for questions from you. You can always contact us.</p>
                     <br>
                     <div class="pull-right">
-                        <li class="ml-auto"><a href="{{url('/')}}/contact"><i class="fa fa-dashboard">Go to Contact
-                                    Page</i> </a></li>
+                        <li class="ml-auto"><a href="{{url('/')}}/contact"><i class="fa fa-dashboard">Go to Contact Page</i> </a></li>
                     </div>
                 </div>
             </div>

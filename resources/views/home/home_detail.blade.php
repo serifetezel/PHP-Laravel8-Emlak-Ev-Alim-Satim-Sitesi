@@ -18,226 +18,230 @@
 
 
 
-<div class="container">
-    <div class="properties-listing spacer">
+    <div class="container">
+        <div class="properties-listing spacer">
 
-        <div class="row">
-            <div class="col-lg-3 col-sm-4 hidden-xs">
+            <div class="row">
+                <div class="col-lg-3 col-sm-4 hidden-xs">
 
-                <div class="hot-properties hidden-xs">
-                    <h3> Home Features</h3>
+                    <div class="hot-properties hidden-xs">
+                        <h3> Home Features</h3>
 
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/area.png" width="30" height="30"  alt="properties"/></div>
-                        <div class="col-lg-8 col-sm-7">
-                            <h5>Area: </h5>
-                            <p class="area">{{$data->area}}</p> </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/area.png" width="30" height="30"  alt="properties"/></div>
+                            <div class="col-lg-8 col-sm-7">
+                                <h5>Area: </h5>
+                                <p class="area">{{$data->area}}</p> </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/floor.png" width="30" height="30" alt="properties"/></div>
+                            <div class="col-lg-8 col-sm-7">
+                                <h5>Floor: </h5>
+                                <p class="floor">{{$data->floor}}</p> </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/room.png" width="30" height="30" alt="properties"/></div>
+                            <div class="col-lg-8 col-sm-7">
+                                <h5>Room: </h5>
+                                <p class="room">{{$data->room}}</p> </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/bathroom.png" width="30" height="30" alt="properties"/></div>
+                            <div class="col-lg-8 col-sm-7">
+                                <h5>Bathroom: </h5>
+                                <p class="bathroom">{{$data->bathroom}}</p> </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/balcony.png" width="30" height="30" alt="properties"/></div>
+                            <div class="col-lg-8 col-sm-7">
+                                <h5>Balcony: </h5>
+                                <p class="balcony">{{$data->balcony}}</p> </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/garden.png" width="30" height="30" alt="properties"/></div>
+                            <div class="col-lg-8 col-sm-7">
+                                <h5>Garden: </h5>
+                                <p class="garden">{{$data->garden}}</p> </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/garage.png" width="30" height="30" alt="properties"/></div>
+                            <div class="col-lg-8 col-sm-7">
+                                <h5>Garage: </h5>
+                                <p class="garage">{{$data->garage}}</p> </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/furnished.png" width="30" height="30" alt="properties"/></div>
+                            <div class="col-lg-8 col-sm-7">
+                                <h5>Furnished: </h5>
+                                <p class="furnished">{{$data->furnished}}</p> </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/heating.png" width="30" height="30" alt="properties"/></div>
+                            <div class="col-lg-8 col-sm-7">
+                                <h5>Heating: </h5>
+                                <p class="heating">{{$data->heating}}</p> </div>
+                        </div>
                     </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/floor.png" width="30" height="30" alt="properties"/></div>
-                        <div class="col-lg-8 col-sm-7">
-                            <h5>Floor: </h5>
-                            <p class="floor">{{$data->floor}}</p> </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/room.png" width="30" height="30" alt="properties"/></div>
-                        <div class="col-lg-8 col-sm-7">
-                            <h5>Room: </h5>
-                            <p class="room">{{$data->room}}</p> </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/bathroom.png" width="30" height="30" alt="properties"/></div>
-                        <div class="col-lg-8 col-sm-7">
-                            <h5>Bathroom: </h5>
-                            <p class="bathroom">{{$data->bathroom}}</p> </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/balcony.png" width="30" height="30" alt="properties"/></div>
-                        <div class="col-lg-8 col-sm-7">
-                            <h5>Balcony: </h5>
-                            <p class="balcony">{{$data->balcony}}</p> </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/garden.png" width="30" height="30" alt="properties"/></div>
-                        <div class="col-lg-8 col-sm-7">
-                            <h5>Garden: </h5>
-                            <p class="garden">{{$data->garden}}</p> </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/garage.png" width="30" height="30" alt="properties"/></div>
-                        <div class="col-lg-8 col-sm-7">
-                            <h5>Garage: </h5>
-                            <p class="garage">{{$data->garage}}</p> </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/furnished.png" width="30" height="30" alt="properties"/></div>
-                        <div class="col-lg-8 col-sm-7">
-                            <h5>Furnished: </h5>
-                            <p class="furnished">{{$data->furnished}}</p> </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/heating.png" width="30" height="30" alt="properties"/></div>
-                        <div class="col-lg-8 col-sm-7">
-                            <h5>Heating: </h5>
-                            <p class="heating">{{$data->heating}}</p> </div>
-                    </div>
-                </div>
 
 
-<br><br>
-                <div class="advertisement">
-                    <h4>Advertisements</h4>
-                    <img src="{{ asset('assets')}}/images/advertisements.jpg" class="img-responsive" alt="advertisement">
+                    <br><br>
+                    <div class="advertisement">
+                        <h4>Advertisements</h4>
+                        <img src="{{ asset('assets')}}/images/advertisements.jpg" class="img-responsive" alt="advertisement">
 
-                </div>
-
-            </div>
-
-            <div class="col-lg-9 col-sm-8 ">
-                <div class="col-md-8">
-                <div><h2 style="font-weight: bold">{{$data->title}}</h2></div>
+                    </div>
 
                 </div>
 
-                <div class="row">
-
-                    <div class="col-lg-8">
-
-                        <div class="property-/images">
-                            <!-- Slider Starts -->
-
-
-                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-
-
-
-                                <ol class="carousel-indicators hidden-xs">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-                                    <li data-target="#myCarousel" data-slide-to="2" class=""></li>
-                                    <li data-target="#myCarousel" data-slide-to="3" class=""></li>
-                                </ol>
-
-                                <div class="carousel-inner">
-                                    <!-- Item 1 -->
-                                    <div class="item active">
-                                        <img src="{{Storage::url($data->image)}}" class="properties" alt="properties" />
-                                    </div>
-
-                                    <!-- #Item 2 -->
-
-                                    @foreach($datalist as $rs)
-                                    <div class="item active">
-                                        <img src="{{Storage::url($rs->image)}}" class="properties" alt="properties" />
-                                    </div>
-                                @endforeach
-
-
-                                </div>
-
-                                <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-                                <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-
-                            </div>
-
-                            <!-- #Slider Ends -->
-                        </div>
-
-                        @php
-                            $avrgrev = \App\Http\Controllers\HomeController::avrgreview($data->id);
-                            $countreview = \App\Http\Controllers\HomeController::countreview($data->id);
-                        @endphp
-                        <div>
-                            <i class="fa fa-star @if($avrgrev<1) -o empty @endif"></i>
-                            <i class="fa fa-star @if($avrgrev<2) -o empty @endif"></i>
-                            <i class="fa fa-star @if($avrgrev<3) -o empty @endif"></i>
-                            <i class="fa fa-star @if($avrgrev<4) -o empty @endif"></i>
-                            <i class="fa fa-star @if($avrgrev<5) -o empty @endif"></i>
-                        </div>
-                        <a href="#tab2">{{$countreview}} Review(s){{$avrgrev}} / Add Review</a>
-                            <br><br>
-                        <div class="spacer"><h4><span class="glyphicon glyphicon-th-list"></span>Descriptions of the Home</h4>
-                        <p>{!! $data->description !!}</p>
-                        </div>
-
-                        <div class="spacer"><h4><span class="glyphicon glyphicon-th-list"></span>Detail of the Home</h4>
-                            <p>{!! $data->detail !!}</p>
-                        </div>
-                        <div><h4><span class="glyphicon glyphicon-map-marker"></span> Location : {{$data->location}}</h4>
-                            <div class="well"><iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Pulchowk,+Patan,+Central+Region,+Nepal&amp;aq=0&amp;oq=pulch&amp;sll=37.0625,-95.677068&amp;sspn=39.371738,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Pulchowk,+Patan+Dhoka,+Patan,+Bagmati,+Central+Region,+Nepal&amp;ll=27.678236,85.316853&amp;spn=0.001347,0.002642&amp;t=m&amp;z=14&amp;output=embed"></iframe></div>
-                        </div>
+                <div class="col-lg-9 col-sm-8 ">
+                    <div class="col-md-8">
+                        <div><h2 style="font-weight: bold">{{$data->title}}</h2></div>
 
                     </div>
 
-                    <div class="col-lg-4">
-                        <div class="col-lg-12  col-sm-6">
-                            <div class="property-info">
-                                <p class="price" style="color: #44C662; font-weight: bold" >{{$data->price}} TL</p>
-                                <p class="area"><span class="glyphicon glyphicon-map-marker"></span>{{$data->location}}</p>
-                                <div class="profile">
-                                    <span class="glyphicon glyphicon-user"></span> Agent Details
-                                    <p>Şerife Tezel</p>
-                                     <p>0451 656 56 94</p>
-                                </div>
-                            </div>
+                    <div class="row">
 
-                        </div>
-                        <div class="col-lg-12 col-sm-6 ">
-                            <div class="enquiry">
-                                <h5><span class="glyphicon glyphicon-envelope"></span> WRITE YOUR REVIEW </h5>
-                                @livewireStyles
-                                @livewireScripts
-                                @livewire('review', ['id' => $data->id])
-                            </div>
-                        </div>
-                        <br>
-                        <br>
-                        <div class="col-lg-12 col-sm-6 ">
-                            <div class="property-info">
-                                <hr>
-                                <br>
-                                <h5><span class="icon-message"></span> REVIEWS ({{$countreview}}) </h5>
-                                @foreach($reviews as $rs)
-                                    <div class="single">
+                        <div class="col-lg-8">
 
-                                        <div class="heading">
-                                            <div><a href="#"><i class="icon-user3"></i>{{$rs->user->name}}</a></div>
-                                            <div><a href="#"><i class="icon-clock4"></i>{{$rs->created_at}}</a></div>
+                            <div class="property-/images">
+                                <!-- Slider Starts -->
 
-                                            <div>
-                                                <i class="fa fa-star @if($rs->rate<1) -o empty @endif"></i>
-                                                <i class="fa fa-star @if($rs->rate<2) -o empty @endif"></i>
-                                                <i class="fa fa-star @if($rs->rate<3) -o empty @endif"></i>
-                                                <i class="fa fa-star @if($rs->rate<4) -o empty @endif"></i>
-                                                <i class="fa fa-star @if($rs->rate<5) -o empty @endif"></i>
+
+                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                    <!-- Indicators -->
+
+
+
+                                    <ol class="carousel-indicators hidden-xs">
+                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                                        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+                                        <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+                                    </ol>
+
+                                    <div class="carousel-inner">
+                                        <!-- Item 1 -->
+                                        <div class="item active">
+                                            <img src="{{Storage::url($data->image)}}" class="properties" alt="properties" />
+                                        </div>
+
+                                        <!-- #Item 2 -->
+
+                                        @foreach($datalist as $rs)
+                                            <div class="item">
+                                                <img src="{{Storage::url($rs->image)}}" class="properties" alt="properties" />
                                             </div>
-                                        </div>
-                                        <div class="body">
-                                            <strong>{{$rs->subject}}</strong>
-                                            <p>{{$rs->review}}</p>
-                                        </div>
+                                        @endforeach
+
 
                                     </div>
-                                @endforeach
+
+                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                                    <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+
+                                </div>
+
+                                <!-- #Slider Ends -->
                             </div>
+
+                            @php
+                                $avrgrev = \App\Http\Controllers\HomeController::avrgreview($data->id);
+                                $countreview = \App\Http\Controllers\HomeController::countreview($data->id);
+                            @endphp
+                            <div class="rating">
+                                <i class=" @if ($avrgrev<1) icon-star @else icon-star-empty  @endif"></i>
+                                <i class=" @if ($avrgrev<2) icon-star @else icon-star-empty  @endif"></i>
+                                <i class=" @if ($avrgrev<3) icon-star @else icon-star-empty  @endif"></i>
+                                <i class=" @if ($avrgrev<4) icon-star @else icon-star-empty  @endif"></i>
+                                <i class=" @if ($avrgrev<5) icon-star @else icon-star-empty  @endif"></i>
+                            </div>
+                            <a href="#tab2">{{$countreview}} Review(s){{$avrgrev}} / Add Review</a>
+                            <br><br>
+                            <div class="spacer"><h4><span class="glyphicon glyphicon-th-list"></span>Descriptions of the Home</h4>
+                                <p>{!! $data->description !!}</p>
+                            </div>
+
+                            <div class="spacer"><h4><span class="glyphicon glyphicon-th-list"></span>Detail of the Home</h4>
+                                <p>{!! $data->detail !!}</p>
+                            </div>
+                            <div><h4><span class="glyphicon glyphicon-map-marker"></span> Location : {{$data->location}}</h4>
+                                <div class="well"><iframe width="100%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Pulchowk,+Patan,+Central+Region,+Nepal&amp;aq=0&amp;oq=pulch&amp;sll=37.0625,-95.677068&amp;sspn=39.371738,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Pulchowk,+Patan+Dhoka,+Patan,+Bagmati,+Central+Region,+Nepal&amp;ll=27.678236,85.316853&amp;spn=0.001347,0.002642&amp;t=m&amp;z=14&amp;output=embed"></iframe></div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="col-lg-12  col-sm-6">
+                                <div class="property-info">
+                                    <p class="price" style="color: #44C662; font-weight: bold" >{{$data->price}} TL</p>
+                                    <p class="area"><span class="glyphicon glyphicon-map-marker"></span>{{$data->location}}</p>
+                                    <div class="profile">
+                                        <span class="glyphicon glyphicon-user"></span> Contact information
+
+                                        <p>{{$data->name}}</p>
+                                        <p>{{$data->phone}}</p>
+                                        <p>{{$data->email}}</p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-12 col-sm-6 ">
+                                <div class="enquiry">
+                                    <h5><span class="glyphicon glyphicon-envelope"></span> WRITE YOUR REVIEW </h5>
+                                    @livewireStyles
+                                    @livewireScripts
+                                    @livewire('review', ['id' => $data->id])
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="col-lg-12 col-sm-6 ">
+                                <div class="property-info">
+                                    <hr>
+                                    <br>
+                                    <h5><span class="icon-message"></span> REVIEWS ({{$countreview}}) </h5>
+                                    @foreach($reviews as $rs)
+                                        <div class="single">
+
+                                            <div class="heading">
+                                                <div><a href="#"><i class="icon-user3"></i>{{$rs->user->name}}</a></div>
+                                                <div><a href="#"><i class="icon-clock4"></i>{{$rs->created_at}}</a></div>
+
+                                                <div class="rating">
+
+                                                    <i class=" @if ($rs->rate <= 1)  icon-star @else icon-star-empty @endif" ></i>
+                                                    <i class=" @if ($rs->rate <= 2)  icon-star @else  icon-star-empty @endif" ></i>
+                                                    <i class=" @if ($rs->rate <= 3)  icon-star @else  icon-star-empty @endif" ></i>
+                                                    <i class=" @if ($rs->rate <= 4)  icon-star @else icon-star-empty @endif" ></i>
+                                                    <i class=" @if ($rs->rate <= 5)  icon-star @else  icon-star-empty @endif" ></i>
+
+                                                </div>
+                                            </div>
+                                            <div class="body">
+                                                <strong>{{$rs->subject}}</strong>
+                                                <p>{{$rs->review}}</p>
+                                            </div>
+
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
 
                 </div>
-
             </div>
         </div>
     </div>
-</div>
 @endsection
-

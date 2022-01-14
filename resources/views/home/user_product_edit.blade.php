@@ -142,7 +142,19 @@
                                                         @endif
                                                     </div>
                                                 </div>
-
+                                                <p style="font-weight: bold; font-family:'Franklin Gothic Medium'; text-decoration: underline; font-size: 25px">For Contact</p>
+                                                <div class="form-group">
+                                                    <label>Name</label>
+                                                    <input type="text" name="name" value="{{$data->name}}" class="form-control" >
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Phone</label>
+                                                    <input type="text" name="phone" value="{{$data->phone}}" class="form-control" >
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Email</label>
+                                                    <input type="text" name="email" value="{{$data->email}}" class="form-control" >
+                                                </div>
 
                                                 <button type="submit" class="btn btn-primary mr-2">Update Home</button>
                                                 <button class="btn btn-dark">Cancel</button>

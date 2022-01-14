@@ -53,7 +53,7 @@ class UserController extends Controller
     {
         $data = User::find($id);
         $datalist = Role::all()->sortBy('name');
-        return view('admin_user_show',['data' => $data,'datalist' => $datalist]);
+        return view('admin.user_show',['data' => $data,'datalist' => $datalist]);
     }
 
     /**

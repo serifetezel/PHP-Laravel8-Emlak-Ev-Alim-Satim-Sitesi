@@ -39,12 +39,14 @@
                             <th>Question</th>
                             <th>Answer</th>
                             <th>Status</th>
-                            <th>Actions</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach($datalist as $rs)
                             <tr>
+                                <td> {{$rs->id}} </td>
                                 <td> {{ $rs->position }}</td>
                                 <td> {{ $rs->question }}</td>
                                 <td> {!! $rs->answer !!} </td>
@@ -57,7 +59,7 @@
 
                     </table>
                     </div>
-                    
+
 
                 </div>
                     </div>

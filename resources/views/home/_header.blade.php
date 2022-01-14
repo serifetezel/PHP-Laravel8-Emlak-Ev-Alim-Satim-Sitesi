@@ -11,20 +11,19 @@
                     <li class="sf-menu" id="fh5co-primary-menu">
                     <li class="active"><a href="{{route('home')}}">Home</a></li>
                     <li>
-                        <a href="properties.html"  class="fh5co-sub-ddown">Categories</a>
+                        <a href="#"  class="fh5co-sub-ddown">Categories</a>
                         @php
                             $parentCategories = \App\Http\Controllers\HomeController::categorylist()
                         @endphp
                         <ul class="fh5co-sub-menu">
                             @foreach($parentCategories as $rs)
                                 <li>
-                                    <a class="fh5co-sub-ddown" data-toggle="dropdown" aria-expanded="true" href="{{route('category_homes',['id'=>$rs->id])}}">{{$rs->title}}
-                                        <a  @if(!isset($page)) show-on-click @endif data-toggle="dropdown" aria-expanded="true">
-                                            @if(count($rs->children))
-                                                @include('home.categorytree',['children' => $rs->children])
-                                            @endif
 
-                                        </a>
+                                    <a href="{{route('category_homes',['id'=>$rs->id])}}">{{$rs->title}}</a>
+                                    <a  @if(!isset($page)) show-on-click @endif data-toggle="dropdown" aria-expanded="true">
+                                        @if(count($rs->children))
+                                            @include('home.categorytree',['children' => $rs->children])
+                                        @endif
 
                                     </a>
 
@@ -35,7 +34,6 @@
                     <li><a href="{{route('allhome')}}">All Homes</a></li>
                     <li><a href="{{route('aboutus')}}">About Us</a></li>
                     <li><a href="{{route('references')}}">References</a></li>
-                    <li><a href="agent.html">Agent</a></li>
                     <li><a href="{{route('blog')}}">Blog</a></li>
                     <li><a href="{{route('contact')}}">Contact</a></li>
 

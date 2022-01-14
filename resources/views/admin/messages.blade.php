@@ -14,7 +14,7 @@
             <ol class="breadcrumb" style="color: #cbd5e0">
                 <li class="ml-auto"><a href="{{url('/')}}/admin"><i class="fa fa-dashboard"></i> Anasayfa</a></li>
                 <li>/</li>
-                <li>Homes</li>
+                <li>Messages List</li>
             </ol>
             <div><br></div>
 
@@ -39,7 +39,7 @@
                             <th>Subject</th>
                             <th>Message</th>
                             <th>Admin Note</th>
-                            <th>Actions</th>
+                            <th>Status</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>

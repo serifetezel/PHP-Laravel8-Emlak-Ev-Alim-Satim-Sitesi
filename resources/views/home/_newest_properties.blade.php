@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
                 <h3>Newest Properties</h3>
-                <p>En yeni evler listemizde sizlerle...</p>
+                <p>We are with you in our list of the newest houses...</p>
             </div>
         </div>
         <div class="row">

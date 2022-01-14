@@ -9,12 +9,12 @@
         <section class="content-header">
 
             <h1>
-                Messages List
+                Reviews List
             </h1>
             <ol class="breadcrumb" style="color: #cbd5e0">
                 <li class="ml-auto"><a href="{{url('/')}}/admin"><i class="fa fa-dashboard"></i> Anasayfa</a></li>
                 <li>/</li>
-                <li>Homes</li>
+                <li>Reviews</li>
             </ol>
             <div><br></div>
 
@@ -38,15 +38,19 @@
                             <th>Subject</th>
                             <th>Review</th>
                             <th>Rate</th>
+                            <th>Status</th>
                             <th>Date</th>
-                            <th>Actions</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
                         </thead>
                         <tbody>
                         @foreach($datalist as $rs)
                             <tr>
                                 <td> {{ $rs->id }}</td>
-                                <td> {{$rs->user->name}}</td>
+                                <td> <a href="{{route('admin_user_show',['id'=>$rs->user->id])}}" onclick="return !window.open(this.href, '','top=50 left=100 width=1100,height=700')">
+                                        {{($rs->user->name)}}
+                                    </a></td>
                                 <td> <a href="{{route('home_detail',['id'=>$rs->home->id])}}" target="_blank">
                                         {{$rs->home->title}}
                                     </a> </td>

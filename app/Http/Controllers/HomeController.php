@@ -45,7 +45,7 @@ class HomeController extends Controller
         $picked = Product::select('id','title','image','price','detail','location','bathroom','room','description','area')->limit(3)->inRandomOrder()->get();
         $faq = Faq::select('question','answer')->limit(3)->inRandomOrder()->get();
         $user = User::select('name','email','phone','profile_photo_path','address')->limit(4)->inRandomOrder()->get();
-
+        $review = \App\Models\Review::select('user_id','home_id','subject','review','rate','created_at')->limit(3)->inRandomOrder()->get();
 
         #print_r($newest);
         #exit();
@@ -57,7 +57,7 @@ class HomeController extends Controller
             'picked'=>$picked,
             'faq'=>$faq,
             'user'=>$user,
-
+            'review'=>$review,
             'page'=>'home'
         ];
 

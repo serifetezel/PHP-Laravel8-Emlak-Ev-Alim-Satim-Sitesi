@@ -1,15 +1,16 @@
 <div id="fh5co-search-map">
     <div class="search-property">
         <div class="s-holder">
-            <h2>Search Properties</h2>
+            <h2 class="glyphicon glyphicon-search">Search Properties</h2>
             <div class="row">
+                <!--
                 <div class="col-xxs-12 col-xs-12">
                     <div class="input-field">
                         <label for="from">Keyword:</label>
                         <input type="text" class="form-control" id="from-place" placeholder="Any"/>
                     </div>
                 </div>
-                <!--
+
                 <div class="col-xxs-12 col-xs-12">
                     <section>
                         <label for="class">Property Status:</label>
@@ -20,7 +21,7 @@
                         </select>
                     </section>
                 </div>
-                -->
+
                 <div class="col-xxs-12 col-xs-12">
                     <section>
                         <label for="class">Property Type:</label>
@@ -105,6 +106,7 @@
                         </div>
                     </section>
                 </div>
+                -->
                 <!--
                 <div class="col-xxs-12 col-xs-12">
                     <section>
@@ -123,14 +125,17 @@
                         </div>
                     </section>
                 </div>
-                -->
+
                 <div class="col-xxs-12 col-xs-12 text-center">
                     <p><a class="btn btn-primary btn-lg" href="#">Learn More</a></p><br>
                 </div>
+                <h3><span class="glyphicon glyphicon-search"></span>Search Button</h3>
+
                 <hr>
                 <br><br>
+                -->
                 <div class="s-holder">
-                    <h3><span class="glyphicon glyphicon-search"></span>Search Button</h3>
+
 
                     <form action="{{route('gethome')}}" method="post">
                         @csrf

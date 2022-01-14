@@ -44,9 +44,8 @@
                                                 </tr>
                                             </table>
                                         </form>
-                                    @section('footerjs') <!--diğer yerlerde bu scripte ihtiyaç var bunu  kullanmak için-->
                                         @livewireScripts
-                                        @endsection
+
                                     </div>
 
 
@@ -90,44 +89,7 @@
                                     <br>
 
 
-                                    <div class="hot-properties hidden-xs">
-                                        <h4>Hot Properties</h4>
-                                        <div class="row">
-                                            <div class="col-lg-4 col-sm-5"><img
-                                                    src="{{ asset('assets')}}/images/properties/1.jpg"
-                                                    class="img-responsive img-circle" alt="properties"></div>
-                                            <div class="col-lg-8 col-sm-7">
-                                                <h5><a href="property-detail.php">Integer sed porta quam</a></h5>
-                                                <p class="price">$300,000</p></div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-4 col-sm-5"><img
-                                                    src="{{ asset('assets')}}/images/properties/1.jpg"
-                                                    class="img-responsive img-circle" alt="properties"></div>
-                                            <div class="col-lg-8 col-sm-7">
-                                                <h5><a href="property-detail.php">Integer sed porta quam</a></h5>
-                                                <p class="price">$300,000</p></div>
-                                        </div>
 
-                                        <div class="row">
-                                            <div class="col-lg-4 col-sm-5"><img
-                                                    src="{{ asset('assets')}}/images/properties/1.jpg"
-                                                    class="img-responsive img-circle" alt="properties"></div>
-                                            <div class="col-lg-8 col-sm-7">
-                                                <h5><a href="property-detail.php">Integer sed porta quam</a></h5>
-                                                <p class="price">$300,000</p></div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="col-lg-4 col-sm-5"><img
-                                                    src="{{ asset('assets')}}/images/properties/1.jpg"
-                                                    class="img-responsive img-circle" alt="properties"></div>
-                                            <div class="col-lg-8 col-sm-7">
-                                                <h5><a href="property-detail.php">Integer sed porta quam</a></h5>
-                                                <p class="price">$300,000</p></div>
-                                        </div>
-
-                                    </div>
 
 
                                 </div>
@@ -148,12 +110,12 @@
                                     @foreach($datalist as $rs)
                                         <!-- properties -->
                                             <div class="col-lg-4 col-sm-6">
-                                                <div class="properties">
+                                                <div class="properties" style="height: 500px">
                                                     <div class="image-holder"
                                                          style="text-align: right; background-color:#00a045;" ><img
                                                             src="{{Storage::url($rs->image)}}" class="img-responsive"
                                                             alt="properties">
-                                                        <div class="status sold" style="color:#FFFFFF; ">Sold</div>
+                                                        <div class="status sold" style="color:#FFFFFF; ">Sale</div>
                                                     </div>
                                                     <br>
                                                     <h4 style="text-align: center"><a

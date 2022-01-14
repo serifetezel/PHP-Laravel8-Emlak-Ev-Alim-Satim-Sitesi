@@ -135,8 +135,20 @@
                                                         <input type="file" name="image" >
                                                     </div>
                                                 </div>
-
-
+                                                <hr>
+                                                <p style="font-weight: bold; font-family:'Franklin Gothic Medium'; text-decoration: underline; font-size: 25px">For Contact</p>
+                                                <div class="form-group">
+                                                    <label>Name</label>
+                                                    <input type="text" name="name" class="form-control" >
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Phone</label>
+                                                    <input type="text" name="phone" class="form-control" >
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Email</label>
+                                                    <input type="text" name="email" class="form-control" >
+                                                </div>
                                                 <button type="submit" class="btn btn-primary mr-2">Add Home</button>
                                                 <button class="btn btn-dark">Cancel</button>
                                             </div>

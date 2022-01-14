@@ -9,8 +9,8 @@
 							</span>
                     <div class="feature-copy">
                         <h3>Move House</h3>
-                        <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-                        <p><a href="#">Learn More</a></p>
+                        <p>Relocation, also known as moving, or moving house, is the process of one or more individuals leaving one dwelling and settling in another.</p>
+                        <p><a href="{{url('/')}}/contact">Learn More</a></p>
                     </div>
                 </div>
 
@@ -23,8 +23,8 @@
 							</span>
                     <div class="feature-copy">
                         <h3>Mortgage</h3>
-                        <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-                        <p><a href="#">Learn More</a></p>
+                        <p>Mortgage, Tutsat[1] is an economic term that means the purchase of a holding, mortgaged sale, pledge sale or mortgage with borrowed money by showing itself as security.</p>
+                        <p><a href="{{url('/')}}/contact">Learn More</a></p>
                     </div>
                 </div>
             </div>
@@ -35,8 +35,8 @@
 							</span>
                     <div class="feature-copy">
                         <h3>Make Money</h3>
-                        <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-                        <p><a href="#">Learn More</a></p>
+                        <p>Real estate investing involves the purchase, management and sale or rental of real estate for profit.</p>
+                        <p><a href="{{url('/')}}/contact">Learn More</a></p>
                     </div>
                 </div>
             </div>
@@ -50,8 +50,8 @@
 							</span>
                     <div class="feature-copy">
                         <h3>Business Home</h3>
-                        <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-                        <p><a href="#">Learn More</a></p>
+                        <p>It is common practice for an intermediary to provide real estate owners with dedicated sales and marketing support in exchange for commission.</p>
+                        <p><a href="{{url('/')}}/contact">Learn More</a></p>
                     </div>
                 </div>
 
@@ -64,8 +64,8 @@
 							</span>
                     <div class="feature-copy">
                         <h3>Marketing</h3>
-                        <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
-                        <p><a href="#">Learn More</a></p>
+                        <p>Marketing is the process of exploring, creating, and delivering value to meet the needs of a target market in terms of goods and services.</p>
+                        <p><a href="{{url('/')}}/contact">Learn More</a></p>
                     </div>
                 </div>
 
@@ -77,7 +77,7 @@
 							</span>
                     <div class="feature-copy">
                         <h3>Explorer</h3>
-                        <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit.</p>
+                        <p>A new home can change your lifestyle and that of your loved ones; Contact us for the most perfect homes for you.</p>
                         <p><a href="#">Learn More</a></p>
                     </div>
                 </div>

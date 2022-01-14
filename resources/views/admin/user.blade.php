@@ -35,13 +35,14 @@
                         <thead>
                         <tr>
                             <th>Id</th>
-                            <th></th>
+                            <th>Profile</th>
                             <th>Name</th>
                             <th>Email</th>
                             <th>Phone</th>
                             <th>Address</th>
                             <th>Roles</th>
-                            <th>Actions</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
                         </tr>
                         </thead>
                         <tbody>
