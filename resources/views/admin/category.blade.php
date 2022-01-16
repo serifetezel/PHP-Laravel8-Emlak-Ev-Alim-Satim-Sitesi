@@ -47,7 +47,7 @@
                                 <td> {{ $rs->description }}</td>
                                 <td> {{ $rs->status }}</td>
                                 <td><a href="{{route('admin_category_edit', ['id' => $rs->id])}}"> Edit</a></td>
-                                <td><a href="{{route('admin_category_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"  > Delete </a></td>
+                                <td><a href="{{route('admin_category_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"  > <img src="{{asset('assets/admin')}}/assets/images/delete.png" height="15"> </a></td>
                             </tr>
                         @endforeach
                         </tbody>

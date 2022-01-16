@@ -48,63 +48,15 @@
 
                                     </div>
 
-
-                                    <!--
-                                <br>
-                                <div class="row">
-                                    <div class="col-lg-5">
-                                        <select class="form-control">
-                                            <option>Buy</option>
-                                            <option>Rent</option>
-                                            <option>Sale</option>
-                                        </select>
-                                    </div>
-
-                                    <div class="col-lg-7">
-                                        <select class="form-control">
-                                            <option>Price</option>
-                                            <option>$150,000 - $200,000</option>
-                                            <option>$200,000 - $250,000</option>
-                                            <option>$250,000 - $300,000</option>
-                                            <option>$300,000 - above</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <select class="form-control">
-                                            <option>Property Type</option>
-                                            <option>Apartment</option>
-                                            <option>Building</option>
-                                            <option>Office Space</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                -->
                                     <br>
-
 
                                     <br>
                                     <br>
-
-
-
-
 
                                 </div>
 
                                 <div class="col-lg-9 col-sm-8">
-                                    <div class="sortby clearfix">
 
-                                        <div class="pull-right">
-                                            <select class="form-control">
-                                                <option>Sort by</option>
-                                                <option>Price: Low to High</option>
-                                                <option>Price: High to Low</option>
-                                            </select></div>
-
-                                    </div>
                                     <br>
                                     <div class="row" >
                                     @foreach($datalist as $rs)

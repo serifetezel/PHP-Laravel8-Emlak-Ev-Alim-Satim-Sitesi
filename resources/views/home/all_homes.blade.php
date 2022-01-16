@@ -22,9 +22,9 @@
                                                 </tr>
                                             </table>
                                         </form>
-                                    @section('footerjs') <!--diğer yerlerde bu scripte ihtiyaç var bunu  kullanmak için-->
+                                     <!--diğer yerlerde bu scripte ihtiyaç var bunu  kullanmak için-->
                                         @livewireScripts
-                                        @endsection
+
 
                                     </div>
 

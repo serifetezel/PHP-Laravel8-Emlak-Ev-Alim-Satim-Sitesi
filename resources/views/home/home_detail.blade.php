@@ -157,11 +157,11 @@
                                 $countreview = \App\Http\Controllers\HomeController::countreview($data->id);
                             @endphp
                             <div class="rating">
-                                <i class=" @if ($avrgrev<1) icon-star @else icon-star-empty  @endif"></i>
-                                <i class=" @if ($avrgrev<2) icon-star @else icon-star-empty  @endif"></i>
-                                <i class=" @if ($avrgrev<3) icon-star @else icon-star-empty  @endif"></i>
-                                <i class=" @if ($avrgrev<4) icon-star @else icon-star-empty  @endif"></i>
-                                <i class=" @if ($avrgrev<5) icon-star @else icon-star-empty  @endif"></i>
+                                <i class=" @if ($avrgrev>=1) icon-star @else icon-star-outlined  @endif"></i>
+                                <i class=" @if ($avrgrev>=2) icon-star @else icon-star-outlined  @endif"></i>
+                                <i class=" @if ($avrgrev>=3) icon-star @else icon-star-outlined  @endif"></i>
+                                <i class=" @if ($avrgrev>=4) icon-star @else icon-star-outlined  @endif"></i>
+                                <i class=" @if ($avrgrev>=5) icon-star @else icon-star-outlined  @endif"></i>
                             </div>
                             <a href="#tab2">{{$countreview}} Review(s){{$avrgrev}} / Add Review</a>
                             <br><br>
@@ -218,11 +218,11 @@
 
                                                 <div class="rating">
 
-                                                    <i class=" @if ($rs->rate <= 1)  icon-star @else icon-star-empty @endif" ></i>
-                                                    <i class=" @if ($rs->rate <= 2)  icon-star @else  icon-star-empty @endif" ></i>
-                                                    <i class=" @if ($rs->rate <= 3)  icon-star @else  icon-star-empty @endif" ></i>
-                                                    <i class=" @if ($rs->rate <= 4)  icon-star @else icon-star-empty @endif" ></i>
-                                                    <i class=" @if ($rs->rate <= 5)  icon-star @else  icon-star-empty @endif" ></i>
+                                                    <i class=" @if ($rs->rate >= 1)  icon-star @else icon-star-outlined @endif" ></i>
+                                                    <i class=" @if ($rs->rate >= 2)  icon-star @else icon-star-outlined @endif" ></i>
+                                                    <i class=" @if ($rs->rate >= 3)  icon-star @else icon-star-outlined @endif" ></i>
+                                                    <i class=" @if ($rs->rate >= 4)  icon-star @else icon-star-outlined @endif" ></i>
+                                                    <i class=" @if ($rs->rate >= 5)  icon-star @else icon-star-outlined @endif" ></i>
 
                                                 </div>
                                             </div>

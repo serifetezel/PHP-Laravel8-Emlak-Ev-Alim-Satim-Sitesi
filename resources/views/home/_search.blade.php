@@ -3,162 +3,27 @@
         <div class="s-holder">
             <h2 class="glyphicon glyphicon-search">Search Properties</h2>
             <div class="row">
-                <!--
-                <div class="col-xxs-12 col-xs-12">
-                    <div class="input-field">
-                        <label for="from">Keyword:</label>
-                        <input type="text" class="form-control" id="from-place" placeholder="Any"/>
-                    </div>
-                </div>
-
-                <div class="col-xxs-12 col-xs-12">
-                    <section>
-                        <label for="class">Property Status:</label>
-                        <select class="cs-select cs-skin-border">
-                            <option value="" disabled selected>Any</option>
-                            <option value="1">Rent</option>
-                            <option value="2">Sale</option>
-                        </select>
-                    </section>
-                </div>
-
-                <div class="col-xxs-12 col-xs-12">
-                    <section>
-                        <label for="class">Property Type:</label>
-                        <select class="cs-select cs-skin-border input-half">
-                            <option value="" disabled selected>Any</option>
-                            <option value="1">Building</option>
-                            <option value="2">Office</option>
-                        </select>
-                    </section>
-                </div>
-                <div class="col-xxs-12 col-xs-12">
-                    <div class="input-field">
-                        <label for="from">Location:</label>
-                        <input type="text" class="form-control" id="from-place" placeholder="Any"/>
-                    </div>
-                </div>
-                <div class="col-xxs-12 col-xs-12">
-                    <section>
-                        <label for="class">Price:</label>
-                        <div class="wide">
-                            <select class="cs-select cs-select-half cs-skin-border input-half">
-                                <option value="" disabled selected>Any</option>
-                                <option value="1">Building</option>
-                                <option value="2">Office</option>
-                            </select>
-                            <select class="cs-select cs-select-half cs-skin-border input-half">
-                                <option value="" disabled selected>Any</option>
-                                <option value="1">Building</option>
-                                <option value="2">Office</option>
-                            </select>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-xxs-12 col-xs-12">
-                    <section>
-                        <label for="class">Rooms:</label>
-                        <div class="wide">
-                            <select class="cs-select cs-select-half cs-skin-border input-half">
-                                <option value="" disabled selected>Any</option>
-                                <option value="1">Building</option>
-                                <option value="2">Office</option>
-                            </select>
-                            <select class="cs-select cs-select-half cs-skin-border input-half">
-                                <option value="" disabled selected>Any</option>
-                                <option value="1">Building</option>
-                                <option value="2">Office</option>
-                            </select>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-xxs-12 col-xs-12">
-                    <section>
-                        <label for="class">Bathrooms:</label>
-                        <div class="wide">
-                            <select class="cs-select cs-select-half cs-skin-border input-half">
-                                <option value="" disabled selected>Any</option>
-                                <option value="1">Building</option>
-                                <option value="2">Office</option>
-                            </select>
-                            <select class="cs-select cs-select-half cs-skin-border input-half">
-                                <option value="" disabled selected>Any</option>
-                                <option value="1">Building</option>
-                                <option value="2">Office</option>
-                            </select>
-                        </div>
-                    </section>
-                </div>
-                <div class="col-xxs-12 col-xs-12">
-                    <section>
-                        <label for="class">Area:</label>
-                        <div class="wide">
-                            <select class="cs-select cs-select-half cs-skin-border input-half">
-                                <option value="" disabled selected>Any</option>
-                                <option value="1">Building</option>
-                                <option value="2">Office</option>
-                            </select>
-                            <select class="cs-select cs-select-half cs-skin-border input-half">
-                                <option value="" disabled selected>Any</option>
-                                <option value="1">Building</option>
-                                <option value="2">Office</option>
-                            </select>
-                        </div>
-                    </section>
-                </div>
-                -->
-                <!--
-                <div class="col-xxs-12 col-xs-12">
-                    <section>
-                        <label for="class">Parking spots:</label>
-                        <div class="wide">
-                            <select class="cs-select cs-select-half cs-skin-border input-half">
-                                <option value="" disabled selected>Any</option>
-                                <option value="1">Building</option>
-                                <option value="2">Office</option>
-                            </select>
-                            <select class="cs-select cs-select-half cs-skin-border input-half">
-                                <option value="" disabled selected>Any</option>
-                                <option value="1">Building</option>
-                                <option value="2">Office</option>
-                            </select>
-                        </div>
-                    </section>
-                </div>
-
-                <div class="col-xxs-12 col-xs-12 text-center">
-                    <p><a class="btn btn-primary btn-lg" href="#">Learn More</a></p><br>
-                </div>
-                <h3><span class="glyphicon glyphicon-search"></span>Search Button</h3>
-
-                <hr>
-                <br><br>
-                -->
                 <div class="s-holder">
-
 
                     <form action="{{route('gethome')}}" method="post">
                         @csrf
-
-                        <table style="width: 500px">
-                            <div style="text-align: left">
-
+                        <table style="width: 500px;">
                             <tr>
-                                <td>@livewire('search')<br></td><br>
-                            </tr></div>
-                            <tr style="text-align:left">
+                                <td>@livewire('search')<br></td>
+                            </tr>
+                            <br>
+                            <tr style="text-align:right">
                                 <td>
                                     <br>
-                                    <div class="row">
-                                        <p><a class="btn btn-primary btn-lg" href="#">Find Now</a></p>
-                                    </div>
+                                    <button class="btn btn-primary">Find Now</button>
                                 </td>
                             </tr>
                         </table>
                     </form>
-                @section('footerjs') <!--diğer yerlerde bu scripte ihtiyaç var bunu  kullanmak için-->
+                    <!--diğer yerlerde bu scripte ihtiyaç var bunu  kullanmak için-->
                     @livewireScripts
-                    @endsection
+
+
                 </div>
 
             </div>

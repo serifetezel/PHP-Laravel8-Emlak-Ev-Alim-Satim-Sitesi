@@ -46,7 +46,6 @@ class HomeController extends Controller
         $faq = Faq::select('question','answer')->limit(3)->inRandomOrder()->get();
         $user = User::select('name','email','phone','profile_photo_path','address')->limit(4)->inRandomOrder()->get();
         $review = \App\Models\Review::select('user_id','home_id','subject','review','rate','created_at')->limit(3)->inRandomOrder()->get();
-
         #print_r($newest);
         #exit();
         $data=[
@@ -60,6 +59,7 @@ class HomeController extends Controller
             'review'=>$review,
             'page'=>'home'
         ];
+
 
         return view('home.index',$data);
     }
