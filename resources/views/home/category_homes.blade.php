@@ -1,7 +1,7 @@
 @extends('layouts.home')
 
 @section('title',$data->title ."Home List")
-//ürün adı araç çubuğu
+
 @section('description'){{ $data->description }}@endsection
 @section('keywords',$data->keywords)
 @section('content')
