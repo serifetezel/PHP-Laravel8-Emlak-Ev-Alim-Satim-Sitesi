@@ -6,11 +6,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-    <script>
-        $( function() {
-            $( "#accordion" ).accordion();
-        } );
-    </script>
+
 @endsection
 
 @section('content')
@@ -51,25 +47,25 @@
                 <h3>Ev Seçiminin Yapılmasında Dikkat Edilmesi Gerekenler</h3></div>
             <div>
                 <p>
-            	Ev Bütçenizi Net Olarak Belirleyin<br>
+                      Ev Bütçenizi Net Olarak Belirleyin<br>
 
-            	Aklınıza Yatan Tüm Ev Seçeneklerini Ön Elemeden Geçirin<br>
+                      Aklınıza Yatan Tüm Ev Seçeneklerini Ön Elemeden Geçirin<br>
 
-            	Almak İstediğiniz Evde Aracı Olup Olmadığını Kontrol Edin<br>
+                      Almak İstediğiniz Evde Aracı Olup Olmadığını Kontrol Edin<br>
 
-            	Evin Krediye Uygunluk Şartlarını Araştırın<br>
+                      Evin Krediye Uygunluk Şartlarını Araştırın<br>
 
-            	İstenilen Fiyat ile Piyasa Değerini Kıyaslayın<br>
+                      İstenilen Fiyat ile Piyasa Değerini Kıyaslayın<br>
 
-            	Evin Üzerinde İpotek veya Haciz Kaydı Olup Olmadığını Sorun<br>
+                      Evin Üzerinde İpotek veya Haciz Kaydı Olup Olmadığını Sorun<br>
 
-            	Evin Boyası Yeni Yapıldıysa Rutubet Olup Olmadığına Dikkat Edin<br>
+                      Evin Boyası Yeni Yapıldıysa Rutubet Olup Olmadığına Dikkat Edin<br>
 
-            	Ulaşım Seçeneklerini ve Sosyal Alanlara Yakınlığını Değerlendirin<br>
+                      Ulaşım Seçeneklerini ve Sosyal Alanlara Yakınlığını Değerlendirin<br>
 
-            	Apartman Düzeni ve Komşuluk İlişkilerini Araştırın<br>
+                      Apartman Düzeni ve Komşuluk İlişkilerini Araştırın<br>
 
-            	Alınacak Evde Kiracı Varsa Kira Sözleşmesi Şartlarını Değerlendirin
+                      Alınacak Evde Kiracı Varsa Kira Sözleşmesi Şartlarını Değerlendirin
                 </p>
             </div>
             <br><br>
@@ -79,11 +75,11 @@
             </div>
             <div>
                 <p>
-                    	Gerekli Evraklarınız Hazır Olarak Gidin<br>
+                      Gerekli Evraklarınız Hazır Olarak Gidin<br>
 
-                    	Evi Tapuya Aldığınız Fiyat Üzerinden Beyan Edin<br>
+                      Evi Tapuya Aldığınız Fiyat Üzerinden Beyan Edin<br>
 
-                    	Tapu Harcının Kim Tarafından Ödeneceğini Önden Konuşun
+                      Tapu Harcının Kim Tarafından Ödeneceğini Önden Konuşun
                 </p>
             </div>
             <br><br>
@@ -91,16 +87,63 @@
                 <h2 style="color: #00a045">Sizlerden Gelen Sorular: </h2>
             </div>
             <div class="row">
-                <div id="accordion">
+                <div class="col-md-12">
+                    <div class="page-header">
+
+                    </div>
+                <!--{{$i=1}}-->
                     @foreach($datalist as $rs)
-                    <div class="span">
-                        <img src="{{ asset('assets')}}/images/question.png" height="45" width="45" style="float: left">
-                        <h3>{{$rs->question}}</h3>
-                    </div>
-                    <div>
-                        <p>{!! $rs->answer !!}</p>
-                    </div>
+                        @if($i==1)
+                            <div class="panel-group" id="accordion-e1">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title active">
+
+                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-e1"
+                                               href="#{{$i}}">✔️
+                                                {{$rs->question}}
+                                                <span class="fa fa-minus"></span>
+                                            </a>
+                                        </h4>
+                                    </div>
+                                    <div id="{{$i}}" class="panel-collapse collapse in ">
+                                        <div class="panel-body">
+                                            <p>{!! $rs->answer!!}</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <br>
+                        <!-- {{$i=$i+1}}-->
+                            @continue($i==2)
+                        @endif
+
+                        <div class="panel-group" id="accordion-e1">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-e1"
+                                           href="#{{$i}}">✔️
+                                            {{$rs->question}}
+                                            <span class="fa fa-minus"></span>
+                                        </a>
+
+                                    </h4>
+                                </div>
+                                <div id="{{$i}}" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>{!! $rs->answer!!}</p>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+
+                        </div>
+                    <!-- {{$i=$i+1}}-->
                     @endforeach
+
                 </div>
             </div>
         </div>

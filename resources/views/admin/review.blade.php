@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title','Contact Messages List')
+@section('title','Review List')
 
 @section('content')
     <div class="card">

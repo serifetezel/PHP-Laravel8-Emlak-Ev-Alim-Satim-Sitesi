@@ -22,23 +22,11 @@
 
 
                         </blockquote></a>
-                    <!--
-                    <p class="author">John Doe, CEO <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> <span class="subtext">Creative Director</span></p>
-                -->
+
                 </div>
 
             </div>
-            <!--
-            <div class="col-md-4">
-                <div class="box-testimony animate-box">
-                    <blockquote>
-                        <span class="quote"><span><i class="icon-quotes-right"></i></span></span>
-                        <p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.&rdquo;</p>
-                    </blockquote>
-                    <p class="author">John Doe, CEO <a href="http://freehtml5.co/" target="_blank">FREEHTML5.co</a> <span class="subtext">Creative Director</span></p>
-                </div>
-            </div>
-            -->
+
             @endforeach
         </div>
     </div>

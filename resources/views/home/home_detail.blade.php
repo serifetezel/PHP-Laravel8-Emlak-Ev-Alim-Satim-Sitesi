@@ -125,6 +125,7 @@
                                         <li data-target="#myCarousel" data-slide-to="1" class=""></li>
                                         <li data-target="#myCarousel" data-slide-to="2" class=""></li>
                                         <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+                                        <li data-target="#myCarousel" data-slide-to="4" class=""></li>
                                     </ol>
 
                                     <div class="carousel-inner">
@@ -136,17 +137,17 @@
                                         <!-- #Item 2 -->
 
                                         @foreach($datalist as $rs)
-                                            <div class="item">
+                                            <div class="item" >
                                                 <img src="{{Storage::url($rs->image)}}" class="properties" alt="properties" />
                                             </div>
                                         @endforeach
 
 
                                     </div>
-
+<!--
                                     <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
                                     <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-
+-->
                                 </div>
 
                                 <!-- #Slider Ends -->

@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title','Edit Home Page')
+@section('title','Edit Frequently Asked Question Page')
 
 @section('javascript')
     <script src="https://cdn.ckeditor.com/4.17.1/standard/ckeditor.js"></script>
