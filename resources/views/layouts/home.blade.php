@@ -83,8 +83,6 @@
 
     <link rel="stylesheet" href="{{ asset('assets')}}/css/style.css">
 
-
-
     <!-- Modernizr JS -->
     <script src="{{ asset('assets')}}/js/modernizr-2.6.2.min.js"></script>
     <!-- FOR IE9 below -->
@@ -107,5 +105,4 @@
 </div>
 @yield("footerjs")
 </body>
-
 </html>

@@ -2,7 +2,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 animate-box">
-
                 <div class="feature-left">
 							<span class="icon">
 								<i class="icon-map"></i>
@@ -13,9 +12,7 @@
                         <p><a href="{{url('/')}}/contact">Learn More</a></p>
                     </div>
                 </div>
-
             </div>
-
             <div class="col-md-4 animate-box">
                 <div class="feature-left">
 							<span class="icon">
@@ -43,7 +40,6 @@
         </div>
         <div class="row">
             <div class="col-md-4 animate-box">
-
                 <div class="feature-left">
 							<span class="icon">
 								<i class="icon-piechart"></i>
@@ -54,9 +50,7 @@
                         <p><a href="{{url('/')}}/contact">Learn More</a></p>
                     </div>
                 </div>
-
             </div>
-
             <div class="col-md-4 animate-box">
                 <div class="feature-left">
 							<span class="icon">
@@ -68,7 +62,6 @@
                         <p><a href="{{url('/')}}/contact">Learn More</a></p>
                     </div>
                 </div>
-
             </div>
             <div class="col-md-4 animate-box">
                 <div class="feature-left">

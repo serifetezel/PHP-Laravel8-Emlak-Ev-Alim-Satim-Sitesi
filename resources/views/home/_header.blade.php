@@ -1,12 +1,10 @@
 <header id="fh5co-header-section" class="sticky-banner">
     <div class="container">
-
         <div class="nav-header">
             <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle dark"><i></i></a>
             <h1 id="fh5co-logo"><a href="{{route('home')}}"><i class="icon-home"></i>Home<span>state</span></a></h1>
             <!-- START #fh5co-menu-wrap -->
             <nav id="fh5co-menu-wrap" role="navigation">
-
                 <ul class="sf-menu" id="fh5co-primary-menu">
                     <li class="sf-menu" id="fh5co-primary-menu">
                     <li class="active"><a href="{{route('home')}}">Home</a></li>
@@ -18,15 +16,12 @@
                         <ul class="fh5co-sub-menu">
                             @foreach($parentCategories as $rs)
                                 <li>
-
                                     <a href="{{route('category_homes',['id'=>$rs->id])}}">{{$rs->title}}</a>
                                     <a  @if(!isset($page)) show-on-click @endif data-toggle="dropdown" aria-expanded="true">
                                         @if(count($rs->children))
                                             @include('home.categorytree',['children' => $rs->children])
                                         @endif
-
                                     </a>
-
                                 </li>
                             @endforeach
                         </ul>
@@ -57,20 +52,7 @@
                             <li><a href="{{route('logout')}}" >
                                     <img src="{{ asset('assets')}}/images/logout.png" height="20" width="20">Logout</a></li>
                         </ul>
-
-                        <!--
-                        <ul class="fh5co-sub-menu">
-                        <a class="dropdown-item preview-item">
-                                <p class="preview-subject mb-1">Log out</p>
-                        </a>
-                        </ul>
-                        -->
-
                     </li>
-
-
-
-
                 </ul>
             </nav>
         </div>

@@ -24,11 +24,8 @@
 
         <!-- Main content -->
 
-
             <!-- Default box -->
             <div class="card">
-
-
                 <div class="card-body">
                     <div style="overflow:auto">
                     <table class="table table-bordered">
@@ -59,8 +56,6 @@
 
                     </table>
                     </div>
-
-
                 </div>
                     </div>
                 </div>
@@ -71,8 +66,5 @@
                 <!-- /.box-footer-->
             </div>
             <!-- /.box -->
-
-
         <!-- /.content -->
-
 @endsection

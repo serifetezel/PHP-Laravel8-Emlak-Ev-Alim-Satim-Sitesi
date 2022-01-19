@@ -83,11 +83,11 @@
                         @if (Auth::user()->profile_photo_path)
                             <img src="{{Storage::url(Auth::user()->profile_photo_path)}}" height="50" style="border-radius: 10px" alt="">
                         @endif
-                        <!--<p class="mb-0 d-none d-sm-block navbar-profile-name">Henry Klein</p>-->
+
                         @auth
                         <a href="#" style="font-size:12px; color:#cbd5e0" class="mb-0 d-none d-sm-block navbar-profile-name">{{ Auth::user()->name }}</a>
                         @endauth
-                        <!--<i class="mdi mdi-menu-down d-none d-sm-block"></i>-->
+
 
                     </div>
                 </a>

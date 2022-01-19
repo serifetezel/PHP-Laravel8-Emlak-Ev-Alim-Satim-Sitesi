@@ -25,15 +25,11 @@
                     <li>/</li>
                     <li>User Düzenle</li>
                 </ol>
-
             </section>
-
             <!-- Main content -->
         <section class="content">
-
             <!-- Default box -->
             <div class="card">
-
                     <form class="forms-sample" action="{{route('admin_user_update',['id'=>$data->id])}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
@@ -63,8 +59,6 @@
                                     @endif
                                 </div>
                             </div>
-
-
                         <button type="submit" class="btn btn-primary mr-2">Update User</button>
                         <button class="btn btn-dark">Cancel</button>
                         </div>

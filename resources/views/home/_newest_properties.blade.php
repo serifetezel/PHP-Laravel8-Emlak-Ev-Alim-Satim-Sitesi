@@ -22,9 +22,7 @@
                     <div class="property-details">
                         <h3>{{$rs->title}}</h3>
                         <span class="price">{{$rs->price}} TL</span>
-
                         <p>{{$rs->description}}</p>
-
                         <span class="address"><i class="icon-map"></i>{{$rs->location}}</span>
                         <div class="pull-right">
                         @php
@@ -39,12 +37,10 @@
                             <i class=" @if ($avrgrev>=5) icon-star @else icon-star-outlined  @endif"></i>
                         </div>
                         </div>
-
                     </div>
                 </div>
             </div>
             @endforeach
-
         </div>
     </div>
 </div>

@@ -4,7 +4,6 @@
             <h2 class="glyphicon glyphicon-search">Search Properties</h2>
             <div class="row">
                 <div class="s-holder">
-
                     <form action="{{route('gethome')}}" method="post">
                         @csrf
                         <table style="width: 500px;">
@@ -20,12 +19,8 @@
                             </tr>
                         </table>
                     </form>
-                    <!--diğer yerlerde bu scripte ihtiyaç var bunu  kullanmak için-->
                     @livewireScripts
-
-
                 </div>
-
             </div>
         </div>
     </div>

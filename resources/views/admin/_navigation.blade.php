@@ -14,8 +14,6 @@
                         <span class="count bg-success"></span>
                     </div>
                     <div class="profile-name">
-                        <!--<h5 class="mb-0 font-weight-normal">Henry Klein</h5>
-                        <span>Gold Member</span>-->
                         @auth
                             <a href="{{url('/')}}/admin" class="d-block" style="font-size:15px; color:#cbd5e0">{{ Auth::user()->name }}</a>
                             <a style="font-size:15px; color:#cbd5e0" href="{{ route('logout') }}" class="d-block">Logout</a>
@@ -121,9 +119,6 @@
                 <span class="menu-title">Reviews</span>
             </a>
         </li>
-
-
-
     </ul>
 </nav>
 <!-- partial -->

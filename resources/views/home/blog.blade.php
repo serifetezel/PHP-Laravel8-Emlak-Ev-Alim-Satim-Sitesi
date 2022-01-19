@@ -89,7 +89,6 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header">
-
                     </div>
                 <!--{{$i=1}}-->
                     @foreach($datalist as $rs)
@@ -143,7 +142,6 @@
                         </div>
                     <!-- {{$i=$i+1}}-->
                     @endforeach
-
                 </div>
             </div>
         </div>

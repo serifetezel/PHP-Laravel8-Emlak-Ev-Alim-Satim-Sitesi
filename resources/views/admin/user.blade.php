@@ -23,12 +23,8 @@
         </section>
 
         <!-- Main content -->
-
-
             <!-- Default box -->
             <div class="card">
-
-
                 <div class="card-body">
                     <div style="overflow:auto">
                     <table class="table table-bordered">
@@ -75,13 +71,10 @@
 
                     </table>
                     </div>
-
-
                 </div>
                     </div>
                 </div>
                 <!-- /.box-body -->
-
                 <!-- /.box-footer-->
         <div class="card-footer clearfix">
             <ul class="pagination pagination-sm no-margin pull-right">
@@ -106,8 +99,5 @@
         </div>
             </div>
             <!-- /.box -->
-
-
         <!-- /.content -->
-
 @endsection

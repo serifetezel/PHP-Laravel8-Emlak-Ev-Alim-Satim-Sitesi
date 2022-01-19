@@ -67,11 +67,7 @@
                                     </td>
                                 </tr>
                                 </thead>
-
-
                             </table>
-
-
                         </div>
                     </form>
         <!-- /.box-body -->

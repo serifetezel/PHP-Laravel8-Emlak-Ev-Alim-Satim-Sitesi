@@ -4,7 +4,6 @@
 
 @section('content')
     <br>
-
     <div id="breadcrumb">
         <div class="container">
             <ul class="breadcrumb">
@@ -13,7 +12,6 @@
             </ul>
         </div>
     </div>
-
     <div class="section">
         <div class="container">
             <div class="row">

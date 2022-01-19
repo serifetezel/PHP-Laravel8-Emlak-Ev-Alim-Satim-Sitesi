@@ -24,7 +24,6 @@
             </ul>
             <ol class="flex-control-nav flex-control-paging"></ol><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev flex-disabled" href="#" tabindex="-1">Previous</a></li><li class="flex-nav-next"><a class="flex-next flex-disabled" href="#" tabindex="-1">Next</a></li></ul></div>
     </aside>
-
     <br>
     <div class="section" >
         <div class="container">
@@ -43,7 +42,6 @@
             <form id="checkout-form" class="clearfix" method="post" action="{{route('sendmessage')}}">
                 @csrf
                 <div class="row animate-box fadeInUp animated">
-
                     <br><br>
                     <div class="col-md-12">
                         <div class="row">
@@ -81,12 +79,10 @@
                         </div>
                     </div>
                     </div>
-
             </form>
             </div>
         </div>
     </div>
-
 @endsection
 
 

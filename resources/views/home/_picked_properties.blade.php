@@ -31,9 +31,7 @@
                         <i class=" @if ($avrgrev>=5) icon-star @else icon-star-outlined  @endif"></i>
                     </div>
                 </div>
-
         @endforeach
-
         </div>
     </div>
 </div>

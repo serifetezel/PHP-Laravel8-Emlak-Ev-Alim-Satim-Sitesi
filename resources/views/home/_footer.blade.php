@@ -93,7 +93,5 @@ $setting=\App\Http\Controllers\HomeController::getSetting()
 <!-- CS Select -->
 <script src="{{ asset('assets')}}/js/classie.js"></script>
 <script src="{{ asset('assets')}}/js/selectFx.js"></script>
-
-
 <!-- Main JS -->
 <script src="{{ asset('assets')}}/js/main.js"></script>

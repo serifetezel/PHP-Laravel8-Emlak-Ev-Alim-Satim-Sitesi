@@ -17,24 +17,16 @@
             <div style="text-align: center"><h1>
                My Review List
                 </h1></div>
-
             <br>
-
         </section>
-
         <!-- Main content -->
-
          <div class="section">
-
-
                     <div class="row">
                         <div id="aside" class="col-md-2">
                             @include('home.usermenu')
                         </div>
             <!-- Default box -->
             <div class="card">
-
-
                 <div class="card-body">
                     <div style="overflow:auto">
                         <div class="container">
@@ -68,17 +60,13 @@
                             </tr>
                         @endforeach
                         </tbody>
-
                     </table>
                         </div>
                     </div>
-
-
                 </div>
                     </div>
                 </div>
                 <!-- /.box-body -->
-
                 <!-- /.box-footer-->
             </div>
             <!-- /.box -->
@@ -87,5 +75,4 @@
 
     </div>
         <!-- /.content -->
-
 @endsection

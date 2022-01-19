@@ -24,9 +24,7 @@
                                                 <li><a href="{{route('home')}}">Home List</a></li>
                                                 <li class="active">{{\App\Http\Controllers\Admin\CategoryController::getParentsTree($data, $data->title)}}</li>
                                             </ul>
-
                                         </div>
-
                                     </div>
                                     <!-- Searh-->
                                     <div class="header-search">
@@ -45,16 +43,11 @@
                                             </table>
                                         </form>
                                         @livewireScripts
-
                                     </div>
-
-                                    <br>
-
                                     <br>
                                     <br>
-
+                                    <br>
                                 </div>
-
                                 <div class="col-lg-9 col-sm-8">
 <br>
                                     <br>
@@ -84,200 +77,7 @@
                                                 </div>
                                                 <br>
                                             </div>
-
                                     @endforeach
-                                    <!-- properties -->
-
-
-                                    <!-- properties
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="properties" style="align-self: center">
-                                            <div class="image-holder" style="text-align: right; background-color:#00a045"><img src="{{ asset('assets')}}/images/properties/2.jpg" class="img-responsive" alt="properties">
-                                                <div class="status sold" style="color:#FFFFFF; " style="color:#FFFFFF; ">Sold </div>
-
-                                            </div>
-                                    <br>
-                                            <h4 style="text-align: center"><a href="property-detail.php" style="text-align: center">Royal Inn</a></h4>
-                                            <hr>
-                                            <p class="price" style="text-align: center">Price: $234,900</p>
-
-                                            <div style="text-align:center" ><div style="text-align:center" ><div style="text-align:center" ><a class="btn btn-primary" href="property-detail.php">View Details</a></div></div></div><br>
-                                        </div>
-                                    </div>-->
-                                        <!-- properties -->
-
-                                    <!-- properties
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="properties">
-                                            <div class="image-holder" style="text-align: right; background-color:#00a045"><img src="{{ asset('assets')}}/images/properties/3.jpg" class="img-responsive" alt="properties">
-                                                <div class="status sold" style="color:#FFFFFF; ">Sold</div>
-                                            </div>
-                                            <br>
-                                            <h4 style="text-align: center"><a href="property-detail.php">Royal Inn</a></h4>
-                                            <hr>
-                                            <p class="price" style="text-align: center">Price: $234,900</p>
-                                            <div style="text-align:center" ><div style="text-align:center" ><a class="btn btn-primary" href="property-detail.php">View Details</a></div></div><br>
-                                        </div>
-                                    </div>-->
-                                    <!-- properties
-                                </div>
-                                <br><br>
-                                <div class="row">
-                                     properties
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="properties">
-                                            <div class="image-holder" style="text-align: right; background-color:#00a045"><img src="{{ asset('assets')}}/images/properties/1.jpg" class="img-responsive" alt="properties">
-                                                <div class="status sold" style="color:#FFFFFF; ">Sold</div>
-                                            </div>
-                                            <br>
-                                            <h4 style="text-align: center"><a href="property-detail.php">Royal Inn</a></h4>
-                                            <hr>
-                                            <p class="price" style="text-align: center">Price: $234,900</p>
-                                            <div style="text-align:center" ><div style="text-align:center" ><a class="btn btn-primary" href="property-detail.php">View Details</a></div></div><br>
-                                        </div>
-                                    </div>  -->
-                                        <!-- properties -->
-
-                                    <!-- properties
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="properties">
-                                            <div class="image-holder" style="text-align: right; background-color:#00a045"><img src="{{ asset('assets')}}/images/properties/4.jpg" class="img-responsive" alt="properties">
-                                                <div class="status sold" style="color:#FFFFFF; ">Sold</div>
-                                            </div>
-                                            <br>
-                                            <h4 style="text-align: center"><a href="property-detail.php">Royal Inn</a></h4>
-                                            <hr>
-                                            <p class="price" style="text-align: center">Price: $234,900</p>
-                                            <div style="text-align:center" ><div style="text-align:center" ><a class="btn btn-primary" href="property-detail.php">View Details</a></div></div><br>
-                                        </div>
-                                    </div> -->
-                                        <!-- properties -->
-
-                                    <!-- properties
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="properties">
-                                            <div class="image-holder" style="text-align: right; background-color:#00a045"><img src="{{ asset('assets')}}/images/properties/1.jpg" class="img-responsive" alt="properties">
-                                                <div class="status sold" style="color:#FFFFFF; ">Sold</div>
-                                            </div>
-                                            <br>
-                                            <h4 style="text-align: center"><a href="property-detail.php">Royal Inn</a></h4>
-                                            <hr>
-                                            <p class="price" style="text-align: center">Price: $234,900</p>
-                                            <div style="text-align:center" ><div style="text-align:center" ><a class="btn btn-primary" href="property-detail.php">View Details</a></div></div><br>
-                                        </div>
-                                    </div> -->
-                                    <!-- properties
-                                </div>
-                                <br><br>
-                                <div class="row">
-                                     properties
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="properties">
-                                            <div class="image-holder" style="text-align: right; background-color:#00a045"><img src="{{ asset('assets')}}/images/properties/4.jpg" class="img-responsive" alt="properties">
-                                                <div class="status sold" style="color:#FFFFFF; ">Sold</div>
-                                            </div>
-                                            <br>
-                                            <h4 style="text-align: center"><a href="property-detail.php">Royal Inn</a></h4>
-                                            <hr>
-                                            <p class="price" style="text-align: center">Price: $234,900</p>
-                                            <div style="text-align:center" ><div style="text-align:center" ><a class="btn btn-primary" href="property-detail.php">View Details</a></div></div><br>
-                                        </div>
-                                    </div> -->
-                                        <!-- properties -->
-
-                                    <!-- properties
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="properties">
-                                            <div class="image-holder" style="text-align: right; background-color:#00a045"><img src="{{ asset('assets')}}/images/properties/3.jpg" class="img-responsive" alt="properties">
-                                                <div class="status sold" style="color:#FFFFFF; ">Sold</div>
-                                            </div>
-                                            <br>
-                                            <h4 style="text-align: center"><a href="property-detail.php">Royal Inn</a></h4>
-                                            <hr>
-                                            <p class="price" style="text-align: center">Price: $234,900</p>
-                                            <div style="text-align:center" ><div style="text-align:center" ><a class="btn btn-primary" href="property-detail.php">View Details</a></div></div>
-                                        </div>
-                                    </div> -->
-                                        <!-- properties -->
-
-                                    <!-- properties
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="properties">
-                                            <div class="image-holder" style="text-align: right; background-color:#00a045"><img src="{{ asset('assets')}}/images/properties/2.jpg" class="img-responsive" alt="properties">
-                                                <div class="status sold" style="color:#FFFFFF; ">Sold</div>
-                                            </div>
-                                            <br>
-                                            <h4 style="text-align: center"><a href="property-detail.php">Royal Inn</a></h4>
-                                            <hr>
-                                            <p class="price" style="text-align: center">Price: $234,900</p>
-                                            <div style="text-align:center" ><div style="text-align:center" ><a class="btn btn-primary" href="property-detail.php">View Details</a></div></div>
-                                        </div>
-                                    </div> -->
-                                        <!-- properties
-                                    </div>
-                                    <br>
-                                    <div class="row">-->
-                                    <!-- properties
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="properties">
-                                            <div class="image-holder" style="text-align: right; background-color:#00a045"><img src="{{ asset('assets')}}/images/properties/1.jpg" class="img-responsive" alt="properties">
-                                                <div class="status sold" style="color:#FFFFFF; ">Sold</div>
-                                            </div>
-                                            <br>
-                                            <h4 style="text-align: center"><a href="property-detail.php">Royal Inn</a></h4>
-                                            <hr>
-                                            <p class="price" style="text-align: center">Price: $234,900</p>
-                                            <div style="text-align:center" ><div style="text-align:center" ><a class="btn btn-primary" href="property-detail.php">View Details</a></div></div>
-                                        </div>
-                                    </div> -->
-                                    <!-- properties
-
-                                     properties
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="properties">
-                                            <div class="image-holder" style="text-align: right; background-color:#00a045"><img src="{{ asset('assets')}}/images/properties/4.jpg" class="img-responsive" alt="properties">
-                                                <div class="status sold" style="color:#FFFFFF; ">Sold</div>
-                                            </div>
-                                            <br>
-                                            <h4 style="text-align: center"><a href="property-detail.php">Royal Inn</a></h4>
-                                            <hr>
-                                            <p class="price" style="text-align: center">Price: $234,900</p>
-
-                                            <div style="text-align:center" ><div style="text-align:center" ><a class="btn btn-primary" href="property-detail.php">View Details</a></div></div>
-                                        </div>
-                                    </div> -->
-                                        <!-- properties -->
-
-                                    <!-- properties
-                                    <div class="col-lg-4 col-sm-6">
-                                        <div class="properties">
-                                            <div class="image-holder" style="text-align: right; background-color:#00a045"><img src="{{ asset('assets')}}/images/properties/3.jpg" class="img-responsive" alt="properties">
-                                                <div class="status sold" style="color:#FFFFFF; ">Sold</div>
-                                            </div>
-                                            <br>
-                                            <h4 style="text-align: center"><a href="property-detail.php">Royal Inn</a></h4>
-                                            <hr>
-                                            <p class="price" style="text-align: center">Price: $234,900</p>
-
-                                            <div style="text-align:center" ><div style="text-align:center" ><a class="btn btn-primary" href="property-detail.php">View Details</a></div></div>
-                                        </div>
-                                    </div>-->
-
-                                    </div>
-
-                                    <!-- properties
-                                    <div class="center">
-                                        <ul class="pagination">
-                                            <li><a href="#">«</a></li>
-                                            <li><a href="#">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li><a href="#">»</a></li>
-                                        </ul>
-                                    </div>-->
-
                                 </div>
                             </div>
                         </div>

@@ -21,7 +21,6 @@
 
             <!-- Main content -->
             <section class="content">
-
                 <!-- Default box -->
                 <div class="box">
                     <div class="box-header with-border">
@@ -34,8 +33,6 @@
                         Body Area
 
                     </div>
-
-
                     <!-- /.box-body -->
                     <div class="box-footer clearfix">
                         Footer

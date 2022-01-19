@@ -18,7 +18,6 @@
                             <h3>{{$rs->home->title}}</h3>
                             <hr>
                             <h3>{{$rs->subject}}</h3>
-
                             <p>{{$rs->review}}</p>
                             <span class="posted_by">{{$rs->created_at}}</span>
                             <span class="comment"><a href="">{{$rs->rate}}<i class="icon-star-full"></i></a></span>
@@ -27,7 +26,6 @@
                 </div>
             </div>
             @endforeach
-
         </div>
     </div>
 </div>

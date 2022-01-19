@@ -23,8 +23,6 @@
         </section>
 
         <!-- Main content -->
-
-
             <!-- Default box -->
             <div class="card">
 
@@ -83,8 +81,5 @@
                 <!-- /.box-footer-->
             </div>
             <!-- /.box -->
-
-
         <!-- /.content -->
-
 @endsection

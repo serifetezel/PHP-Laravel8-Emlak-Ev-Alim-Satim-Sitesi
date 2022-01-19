@@ -24,14 +24,9 @@
                                         </form>
                                      <!--diğer yerlerde bu scripte ihtiyaç var bunu  kullanmak için-->
                                         @livewireScripts
-
-
                                     </div>
-
                                     <br>
-
                                     <br>
-
                                     <br>
                                     <div class="row">
                                     @foreach($datalist as $rs)
@@ -53,15 +48,9 @@
                                                         TL</p>
                                                     <div style="text-align:center"><a class="btn btn-primary"
                                                            href="{{route('home_detail',['id'=>$rs->id])}}">View Details</a></div>
-
                                                 <br><br>
                                             </div>
-
                                     @endforeach
-
-
-
-
             </div>
         </div>
     </div>

@@ -17,27 +17,18 @@
             <div style="text-align: center"><h1>
                My Home List
                 </h1></div>
-
             @include('home.message')
             <div style="text-align: right"><a href="{{route('user_product_add')}}" type="button" class="btn btn-primary" style="width: 120px">Add Home</a></div>
-
             <br>
-
         </section>
-
         <!-- Main content -->
-
          <div class="section">
-
-
                     <div class="row">
                         <div id="aside" class="col-md-2">
                             @include('home.usermenu')
                         </div>
             <!-- Default box -->
             <div class="card">
-
-
                 <div class="card-body">
                     <div style="overflow:auto">
                         <div class="container">
@@ -82,20 +73,15 @@
                     </table>
                         </div>
                     </div>
-
-
                 </div>
                     </div>
                 </div>
                 <!-- /.box-body -->
-
                 <!-- /.box-footer-->
             </div>
             <!-- /.box -->
             </div>
         </div>
-
     </div>
         <!-- /.content -->
-
 @endsection

@@ -230,17 +230,8 @@
                 </div>
             </div>
         </div>
-
-
+    </div>
 </div>
-        </div>
-
-
-
-
-
-
         <!-- /.container-fluid -->
-
         <!-- End of Main Content -->
 @endsection

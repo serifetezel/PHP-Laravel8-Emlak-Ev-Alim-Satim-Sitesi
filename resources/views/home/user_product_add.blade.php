@@ -22,26 +22,17 @@
                     <div style="text-align: center"><h1>
                             Home Add
                         </h1></div>
-
-
                     <div style="text-align: right"><button class="btn btn-sm btn-primary" type="button" data-list-pagination="prev"><span>Add Home</span></button></div><br>
                     <div></div>
-
                 </section>
-
                 <!-- Main content -->
-
                 <div class="section">
-
-
                     <div class="row">
                         <div id="aside" class="col-md-2">
                             @include('home.usermenu')
                         </div>
                         <!-- Default box -->
                         <div class="card">
-
-
                             <div class="card-body">
                                 <div style="overflow:auto">
                                     <div class="block" style="text-align: justify">
@@ -156,20 +147,15 @@
                                         </form>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
                     <!-- /.box-body -->
-
                     <!-- /.box-footer-->
                 </div>
                 <!-- /.box -->
             </div>
         </div>
-
     </div>
     <!-- /.content -->
-
 @endsection

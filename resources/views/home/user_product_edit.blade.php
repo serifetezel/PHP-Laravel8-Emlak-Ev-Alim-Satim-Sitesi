@@ -21,26 +21,17 @@
                     <div style="text-align: center"><h1>
                             Home Edit
                         </h1></div>
-
-
                     <div style="text-align: right"><button class="btn btn-sm btn-primary" type="button" data-list-pagination="prev"><span>Edit Home</span></button></div><br>
                     <div></div>
-
                 </section>
-
                 <!-- Main content -->
-
                 <div class="section">
-
-
                     <div class="row">
                         <div id="aside" class="col-md-2">
                             @include('home.usermenu')
                         </div>
                         <!-- Default box -->
                         <div class="card">
-
-
                             <div class="card-body">
                                 <div style="overflow:auto">
                                     <div class="block" style="text-align: justify">
@@ -50,7 +41,6 @@
                                                 <div class="form-group">
                                                     <label>Category</label>
                                                     <select class="form-control select2" name="category_id" style="width: 100%;">
-
                                                         @foreach($datalist as $rs)
                                                             <option value="{{ $rs->id }}" @if ($rs->id == $data->parent_id) selected="selected" @endif>
                                                                 {{ \App\Http\Controllers\Admin\CategoryController::getParentsTree($rs, $rs->title) }}
@@ -136,7 +126,6 @@
                                                     <label>Image</label>
                                                     <div class="input-group mb-3">
                                                         <input type="file" name="image" class="form-control">
-
                                                         @if ($data->image)
                                                             <img src="{{Storage::url($data->image)}}" height="30">
                                                         @endif
@@ -155,15 +144,12 @@
                                                     <label>Email</label>
                                                     <input type="text" name="email" value="{{$data->email}}" class="form-control" >
                                                 </div>
-
                                                 <button type="submit" class="btn btn-primary mr-2">Update Home</button>
                                                 <button class="btn btn-dark">Cancel</button>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
-
-
                             </div>
                         </div>
                     </div>
@@ -174,7 +160,6 @@
                 <!-- /.box -->
             </div>
         </div>
-
     </div>
     <!-- /.content -->
 

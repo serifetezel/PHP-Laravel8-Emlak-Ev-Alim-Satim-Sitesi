@@ -19,14 +19,9 @@
                             <div>
                                 <p>{!! $rs->answer !!}</p>
                             </div>
-
-
                         </blockquote></a>
-
                 </div>
-
             </div>
-
             @endforeach
         </div>
     </div>

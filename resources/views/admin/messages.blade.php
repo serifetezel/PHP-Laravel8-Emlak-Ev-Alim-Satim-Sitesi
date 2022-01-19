@@ -77,8 +77,5 @@
                 <!-- /.box-footer-->
             </div>
             <!-- /.box -->
-
-
         <!-- /.content -->
-
 @endsection

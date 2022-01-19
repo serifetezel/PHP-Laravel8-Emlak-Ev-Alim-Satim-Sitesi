@@ -18,15 +18,11 @@
     <link rel="shortcut icon" href="{{ asset('assets/admin')}}/assets/images/favicon.png" />
 </head>
 <body>
-
-
     <div class="card">
         <div class="card-body">
             <!-- Content Header (Page header) -->
-
             <!-- Main content -->
         <section class="content">
-
             <!-- Default box -->
             <div class="card">
                     <div class="card-header">
@@ -34,7 +30,6 @@
                         @include('home.message')
                     </div>
                     <div class card-body>
-
                         <table class="table table-bordered">
                             <tr>
                                 <th>Id</th> <td>{{$data->id}}</td>
@@ -77,7 +72,6 @@
                                 </td>
                             </tr>
                         </table>
-
         <!-- /.box-body -->
         <div class="card-footer clearfix">
         </div>
