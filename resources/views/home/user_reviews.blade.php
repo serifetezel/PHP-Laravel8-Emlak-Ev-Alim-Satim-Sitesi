@@ -72,7 +72,6 @@
             <!-- /.box -->
             </div>
         </div>
-
     </div>
         <!-- /.content -->
 @endsection

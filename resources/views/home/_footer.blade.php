@@ -14,7 +14,6 @@ $setting=\App\Http\Controllers\HomeController::getSetting()
                     <strong style="color: #cbd5e0">Fax  :</strong> {{$setting->fax}}<br>
                     <strong style="color: #cbd5e0">Email  :</strong> {{$setting->email}}<br>
                 </div>
-
                 <div class="col-md-3 col-md-push-1">
                     <h3 class="section-title">My Account</h3>
                     <ul>
@@ -23,7 +22,6 @@ $setting=\App\Http\Controllers\HomeController::getSetting()
                         <li><a href="{{route('admin_login')}}">Login</a></li>
                     </ul>
                 </div>
-
                 <div class="col-md-3 col-md-push-1">
                     <h3 class="section-title">Customer Service</h3>
                     <ul>
@@ -35,7 +33,6 @@ $setting=\App\Http\Controllers\HomeController::getSetting()
                         <li><a href="{{route('allhome')}}">All Homes</a></li>
                     </ul>
                 </div>
-
                 <div class="col-md-3">
                     <h3 class="section-title">Information</h3>
                     <ul>
