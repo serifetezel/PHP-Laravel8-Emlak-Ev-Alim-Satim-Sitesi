@@ -59,8 +59,6 @@ class HomeController extends Controller
             'review'=>$review,
             'page'=>'home'
         ];
-
-
         return view('home.index',$data);
     }
 
@@ -129,25 +127,28 @@ class HomeController extends Controller
         return view('home.references',['setting'=>$setting]);
     }
 
-
     public function properties()
     {
         return view('home');
     }
+
     public function agent()
     {
         return view('home');
     }
+
     public function blog()
     {
         $datalist = Faq::all()->sortBy('position');
         return view('home.blog',['datalist'=>$datalist]);
     }
+
     public function contact()
     {
         $setting = Setting::first();
         return view('home.contact',['setting'=>$setting]);
     }
+
     public function sendmessage(Request $request)
     {
         $data = new Message();
@@ -159,10 +160,12 @@ class HomeController extends Controller
         $data->save();
         return redirect()->route('contact')->with('info','Mesajınız Kaydedildi. Teşekkür Ederiz.');
     }
+
     public function login()
     {
         return view('admin.login');
     }
+
     public function logincheck(Request $request)
     {
         if($request->isMethod('post'))
@@ -180,7 +183,6 @@ class HomeController extends Controller
         {
             return view('admin.login');
         }
-
     }
 
     public function logout(Request $request)

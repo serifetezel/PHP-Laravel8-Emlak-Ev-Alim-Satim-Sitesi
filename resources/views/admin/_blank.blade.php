@@ -7,7 +7,6 @@
         <div class="card-body">
             <!-- Content Header (Page header) -->
             <section class="content-header">
-
                 <h1>
                     Kategori Listesi
                 </h1>
@@ -16,22 +15,16 @@
                     <li>/</li>
                     <li><a href="#">Kategoriler</a></li>
                 </ol>
-
             </section>
-
             <!-- Main content -->
             <section class="content">
                 <!-- Default box -->
                 <div class="box">
                     <div class="box-header with-border">
                         Title
-
                     </div>
-
                     <div class="box-body">
-
                         Body Area
-
                     </div>
                     <!-- /.box-body -->
                     <div class="box-footer clearfix">

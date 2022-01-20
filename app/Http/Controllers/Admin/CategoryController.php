@@ -47,6 +47,7 @@ class CategoryController extends Controller
         $datalist = Category::with('children')->get();
         return view('admin.category_add',['datalist' => $datalist]);
     }
+
     /**
      * Insert data
      * @param  \Illuminate\Http\Request  $request
@@ -117,7 +118,6 @@ class CategoryController extends Controller
         $data->status = $request->input('status');
         $data->save();
         return redirect()->route('admin_category');
-
     }
 
     /**

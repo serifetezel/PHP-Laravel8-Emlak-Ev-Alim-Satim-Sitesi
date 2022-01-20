@@ -10,12 +10,10 @@
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
             <span class="mdi mdi-menu"></span>
         </button>
-
         <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item dropdown d-none d-lg-block">
                 <a style="color: #3e8f3e; font-weight: bold; font-size: 25px" href="{{route('home')}}">
                     <i class="mdi mdi-home"></i>HOMESTATE</a>
-
             </li>
             <li class="nav-item nav-settings d-none d-lg-block">
                 <a class="nav-link" href="#">
@@ -27,7 +25,6 @@
                     <i class="mdi mdi-email" style="color: #FFFFFF"></i>
                     <span class="count bg-success"></span>
                 </a>
-
             </li>
             <li class="nav-item dropdown border-left">
                 <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
@@ -79,16 +76,12 @@
             <li class="nav-item dropdown">
                 <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                     <div class="navbar-profile">
-
                         @if (Auth::user()->profile_photo_path)
                             <img src="{{Storage::url(Auth::user()->profile_photo_path)}}" height="50" style="border-radius: 10px" alt="">
                         @endif
-
                         @auth
                         <a href="#" style="font-size:12px; color:#cbd5e0" class="mb-0 d-none d-sm-block navbar-profile-name">{{ Auth::user()->name }}</a>
                         @endauth
-
-
                     </div>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="profileDropdown">

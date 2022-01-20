@@ -37,7 +37,6 @@ class Review extends Component
             'review' => 'required|min:10',
             'rate' => 'required'
         ]);
-
         \App\Models\Review::create([
             'home_id' =>$this->home_id,
             'user_id'=>Auth::id(),
@@ -46,7 +45,6 @@ class Review extends Component
             'subject'=>$this->subject,
             'review'=>$this->review
         ]);
-
         session()->flash('message','Review Send Successfully');
         $this->resetInput();
     }

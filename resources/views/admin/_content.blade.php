@@ -99,7 +99,6 @@
                      <div class="text-md-center text-xl-left">
                          <h6 class="mb-1">Tranfer to Stripe</h6>
                          <p class="text-muted mb-0">07 Jan 2019, 09:12AM</p>
-
                      </div>
                      <div class="align-self-center flex-grow text-right text-md-center text-xl-right py-md-2 py-xl-0">
                          <h6 class="font-weight-bold mb-0">$593</h6>
@@ -210,7 +209,6 @@
          </div>
      </div>
  </div>
-
  <div class="row">
      <div class="col-md-6 col-xl-4 grid-margin stretch-card">
          <div class="card">

@@ -40,7 +40,6 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
         $data = new Product;
         $data->title=$request->input('title');
         $data->keywords=$request->input('keywords');

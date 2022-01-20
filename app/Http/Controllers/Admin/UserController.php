@@ -21,7 +21,6 @@ class UserController extends Controller
         return view('admin.user',['datalist' => $datalist]);
     }
 
-
     /**
      * Show the form for creating a new resource.
      *

@@ -52,19 +52,12 @@
                                     <option>True</option>
                                 </select>
                             </div>
-
-
-
-
                         <button type="submit" class="btn btn-primary mr-2">Add Category</button>
                         <button class="btn btn-dark">Cancel</button>
                         </div>
                     </form>
-
         <!-- /.box-body -->
-        <div class="card-footer clearfix">
-
-        </div>
+        <div class="card-footer clearfix"></div>
             </div>
         </section>
         <!-- /.box-footer-->

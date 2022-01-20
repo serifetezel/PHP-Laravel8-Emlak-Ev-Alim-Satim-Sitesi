@@ -11,30 +11,22 @@
         <div class="card-body">
             <!-- Content Header (Page header) -->
             <section class="content-header">
-
                 <h3>
                     Add FAQ
                 </h3>
-
                 <ol class="breadcrumb" style="color: #cbd5e0">
-
                     <li class="ml-auto"><a href="{{url('/')}}/admin"><i class="fa fa-dashboard"></i> Anasayfa</a></li>
                     <li>/</li>
                     <li>Frequently Asked Question</li>
                 </ol>
-
             </section>
-
             <!-- Main content -->
         <section class="content">
-
             <!-- Default box -->
             <div class="card">
-
                     <form class="forms-sample" action="{{route('admin_faq_store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
-
                         <div class="form-group">
                             <label>Position</label>
                             <input type="number" name="position" value="0" class="form-control" >

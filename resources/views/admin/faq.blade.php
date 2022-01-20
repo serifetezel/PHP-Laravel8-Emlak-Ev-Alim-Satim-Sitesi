@@ -7,7 +7,6 @@
         <div class="card-body">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-
             <h1>
                 Frequently Asked Question List
             </h1>
@@ -16,14 +15,10 @@
                 <li>/</li>
                 <li>Frequently Asked Question</li>
             </ol>
-
             <a href="{{route('admin_faq_add')}}" type="button" class="btn btn-inverse-primary btn-fw" style="width: 120px">Add FAQ</a>
             <div><br></div>
-
         </section>
-
         <!-- Main content -->
-
             <!-- Default box -->
             <div class="card">
                 <div class="card-body">
@@ -53,16 +48,13 @@
                             </tr>
                         @endforeach
                         </tbody>
-
                     </table>
                     </div>
                 </div>
                     </div>
                 </div>
                 <!-- /.box-body -->
-                <div class="card-footer clearfix">
-
-                </div>
+                <div class="card-footer clearfix"></div>
                 <!-- /.box-footer-->
             </div>
             <!-- /.box -->

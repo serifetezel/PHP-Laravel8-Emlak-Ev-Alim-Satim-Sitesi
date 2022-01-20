@@ -18,15 +18,11 @@
     <link rel="shortcut icon" href="{{ asset('assets/admin')}}/assets/images/favicon.png" />
 </head>
 <body>
-
-
     <div class="card">
         <div class="card-body">
             <!-- Content Header (Page header) -->
-
             <!-- Main content -->
         <section class="content">
-
             <!-- Default box -->
             <div class="card">
                     <div class="card-header">
@@ -36,7 +32,6 @@
                     <form class="forms-sample" action="{{route('admin_image_store',['home_id'=>$data->id])}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body">
-
                         <div class="form-group">
                             <label>Title</label>
                             <input type="text" name="title" class="form-control" >
@@ -47,13 +42,10 @@
                                 <input type="file" name="image" >
                                 </div>
                             </div>
-
-
                         <button type="submit" class="btn btn-primary mr-2">Add Image</button>
                         <button class="btn btn-dark">Cancel</button>
                         </div>
                     </form>
-
                         <table class="table table-bordered">
                             <thead>
                             <tr>
@@ -80,7 +72,6 @@
                                 @endforeach
                             </tbody>
                         </table>
-
         <!-- /.box-body -->
         <div class="card-footer clearfix">
         </div>

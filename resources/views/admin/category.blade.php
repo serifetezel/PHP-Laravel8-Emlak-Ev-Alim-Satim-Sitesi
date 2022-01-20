@@ -95,7 +95,6 @@
     <script src="{{asset('assets')}}/admin/assets/vendors/jszip/dist/jszip.min.js"></script>
     <script src="{{asset('assets')}}/admin/assets/vendors/pdfmake/build/pdfmake.min.js"></script>
     <script src="{{asset('assets')}}/admin/assets/vendors/pdfmake/build/vfs_fonts.js"></script>
-
     <!-- Custom Theme Scripts -->
     <script src="{{asset('assets')}}/admin/assets/build/js/custom.min.js"></script>
     <script>
