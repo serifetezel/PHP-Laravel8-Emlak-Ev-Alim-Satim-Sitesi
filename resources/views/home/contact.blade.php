@@ -70,7 +70,6 @@
                                     <textarea type="text" rows="5" class="form-control" name="message" placeholder="Message"></textarea>
                                 </div>
                             </div>
-
                             <div class="col-md-12">
                                 <div class="pull-right">
                                     <input type="submit" value="Send Message" class="btn btn-primary">

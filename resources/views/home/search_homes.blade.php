@@ -10,7 +10,6 @@
             <div class="row" >
                 <div class="container" >
                     <div class="properties-listing spacer">
-
                         <div class="row" >
                             <div class="col-lg-3 col-sm-4 ">
                                 <div id="breadcrumb">
@@ -65,14 +64,12 @@
                                             <h5><a href="property-detail.php">Integer sed porta quam</a></h5>
                                             <p class="price">$300,000</p> </div>
                                     </div>
-
                                     <div class="row">
                                         <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/properties/1.jpg" class="img-responsive img-circle" alt="properties"></div>
                                         <div class="col-lg-8 col-sm-7">
                                             <h5><a href="property-detail.php">Integer sed porta quam</a></h5>
                                             <p class="price">$300,000</p> </div>
                                     </div>
-
                                     <div class="row">
                                         <div class="col-lg-4 col-sm-5"><img src="{{ asset('assets')}}/images/properties/1.jpg" class="img-responsive img-circle" alt="properties"></div>
                                         <div class="col-lg-8 col-sm-7">

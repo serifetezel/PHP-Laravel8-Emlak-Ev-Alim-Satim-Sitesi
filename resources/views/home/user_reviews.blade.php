@@ -32,6 +32,7 @@
                         <div class="container">
                     <table class="table table-bordered">
                         <thead>
+
                         <tr>
                             <th>Id</th>
                             <th>Home</th>
@@ -42,10 +43,12 @@
                             <th>Date</th>
                             <th>Actions</th>
                         </tr>
+
                         </thead>
                         <tbody>
                         @include('home.message')
                         @foreach($datalist as $rs)
+
                             <tr>
                                 <td> {{ $rs->id }}</td>
                                 <td> <a href="{{route('home_detail',['id'=>$rs->home->id])}}" target="_blank">
@@ -57,6 +60,7 @@
                                 <td> {{ $rs->status }}</td>
                                 <td> {{$rs->created_at}}</td>
                                 <td style="text-align: center"><a href="{{route('user_review_delete', ['id' => $rs->id])}}" onclick="return confirm('Delete ! Are you sure?')"  ><img src="{{asset('assets/admin')}}/assets/images/delete.png" height="25" ></a></td>
+
                             </tr>
                         @endforeach
                         </tbody>

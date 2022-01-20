@@ -154,7 +154,6 @@
                         </div>
                     </div>
                     <!-- /.box-body -->
-
                     <!-- /.box-footer-->
                 </div>
                 <!-- /.box -->
@@ -162,5 +161,4 @@
         </div>
     </div>
     <!-- /.content -->
-
 @endsection
